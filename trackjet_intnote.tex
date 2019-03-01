@@ -1,0 +1,176 @@
+%:
+\RequirePackage{lineno}
+
+\documentclass[11pt,a4paper]{atlasnote}
+%\documentclass{atlasnote} 
+\linenumbers
+%\usepackage{subfigure}
+%\usepackage[table]{xcolor}
+\usepackage{graphicx} % This is already loaded by the atlasnote class
+                       % Just use it to include your plots!
+\usepackage{verbatim}
+\usepackage{atlasphysics} % Contains useful shortcuts. Uncomment to use
+                           % See instruction.pdf for details
+\usepackage{epstopdf}
+
+
+\usepackage{relsize}	% not needed in the end
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage{color}
+
+\usepackage[pagebackref=false]{hyperref}
+    \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
+      \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+      \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+      \renewenvironment{#1}%
+         {\linenomath\csname old#1\endcsname}%
+         {\csname oldend#1\endcsname\endlinenomath}}%
+    \newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
+      \patchAmsMathEnvironmentForLineno{#1}%
+      \patchAmsMathEnvironmentForLineno{#1*}}%
+    \AtBeginDocument{%
+    \patchBothAmsMathEnvironmentsForLineno{equation}%
+    \patchBothAmsMathEnvironmentsForLineno{align}%
+    \patchBothAmsMathEnvironmentsForLineno{flalign}%
+    \patchBothAmsMathEnvironmentsForLineno{alignat}%
+    \patchBothAmsMathEnvironmentsForLineno{gather}%
+    \patchBothAmsMathEnvironmentsForLineno{multline}%
+    }
+% ------------ possibility to add backreferences
+%\usepackage[pagebackref]{hyperref}
+%\renewcommand*{\backreflastsep}{, }
+%\renewcommand*{\backreftwosep}{, }
+%\renewcommand*{\backref}[1]{}
+%\renewcommand*{\backrefalt}[4]{%
+%  \ifcase #1 %
+%No citations. % use \relax if you do not want the "No citations" message
+%  \or
+%(page #2).%
+%  \else
+%(pages #2).%
+%  \fi%
+%}
+% ------------ possibility to add backreferences (does not work very well)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           Title page             % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\skipbeforetitle{100pt}
+
+% Title
+\title{Correlations between jets and charged particles in Pb+Pb Collisions at 5.02~TeV}
+% Author
+%if not given, typesets ``The ATLAS collaboration''
+%\author{The ATLAS Collaboration}
+%\atlasnote{ATLAS-COM-CONF-2011-087}
+
+% if multiple authors/affiliations are needed, use the authblk package
+\usepackage{authblk}
+\renewcommand\Authands{, } % avoid ``. and'' for last author
+\renewcommand\Affilfont{\itshape\small} % affiliation formatting
+
+\author[a]{Akshat Puri}
+\author[a]{Martin Rybar}
+\author[a]{Anne Sickles}
+
+\affil[a]{University of Illinois at Urbana-Champaign}
+
+
+% Date: if not given, uses current date
+\date{\today}
+
+% Draft version: if given, adds draft version on front page, a
+% 'DRAFT' box on top of each other page, and line numbers to easy
+% commenting. Comment or remove in final version.
+\draftversion{0.8}
+
+\input{macros}
+
+
+\abstracttext{
+
+This note presents the measurement of track jet correlations at 5.02~TeV in
+   Pb+Pb collisions.  The data were collected in 2015 by the ATLAS detector.  These
+   measurements provide information about the strength and mechanism for jet quenching 
+   in the quark-gluon plasma created in the aftermath of ultra-relativistic collisions
+   between two nuclei.  The correlations measured in \PbPb\ collisions are
+   compared to a \pp\ baseline as a function of the transverse momentum of the jet (\ptjet),
+   and the centrality of the collision.  In both collision systems, jets are 
+   measured with \ptjet\ between 126~GeV and 316~GeV and $|\yjet| <$~1.3, with tracks measured up to angular distances from the jet axis, $r = $~0.6. There is an enhancement of particles carrying a small fraction of the jet momentum that increases in more central collisions and towards larger angular distances with respect to the jet axis. An enhancement of particles carrying a very large fraction of the jet momentum in the jet core is also observed.
+}
+
+%\includecomment{questions}
+\specialcomment{questions}{\begingroup\sffamily\color{blue}}{\endgroup}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%            Content               % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\newpage
+
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:intro}
+\input{intro.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Definition of Measured Quantities}
+\label{sec:trkjet_corr_measurement}
+\input{trkjet_corr_measurement.tex}
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Input Data}
+\label{sec:used_data}
+\input{used_data.tex}
+%\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Event Selection }
+\label{sec:event_selection}
+\input{event_selection.tex}
+\clearpage
+\section{Jet Reconstruction}
+\label{sec:reconstruction}
+\input{reco.tex}
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Basic Cuts and Corrections}
+\label{sec:cuts_corrections}
+\input{cuts_corrections.tex}
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Systematic Uncertainties}
+\label{Sec:systematic}
+\input{uncert.tex}
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+\label{sec:results}
+\input{results.tex}
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summary}
+\label{sec:summary}
+\input{summary.tex}
+\clearpage\appendix
+\section{Appendix: Systematic uncertainties}
+\label{sec:appendixA}
+\input{appendixA}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\clearpage
+\bibliography{trackjet_intnote}
+\bibliographystyle{atlasnote}
+\appendix
+
+\end{document}
