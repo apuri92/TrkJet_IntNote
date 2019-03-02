@@ -17,7 +17,7 @@ A description of the analysis procedure to reconstruct the $\Dptr$ distribution,
 \subsection{Jet Selection and final energy calibration}
 \label{Sec:JetSelection}
 Since the Inner Detector (ID) covers the $|\eta| < 2.5$, the analysis can 
-only be performed for jets within the pseudorapidity interval of $|\eta| < 1.3$ to have the entire $r=$1.2 cone under investigation fully covered by the tracking detector. In both collision systems, jets are 
+only be performed for jets within the pseudorapidity interval of $|\eta| < 1.7$ to have the entire $r=$0.8 cone under investigation fully covered by the tracking detector. In both collision systems, jets are 
 measured with \ptjet\ between 126~GeV and 316~GeV in following four successive intervals: 126--158, 158--200, 200--251, and 251--316~GeV. This binning was motivated by the large fake rate below 100 \GeV. An underflow bin was also needed for the unfolding procedure, and hence, the measurement starts at 126 \GeV. This binning is also used in previous heavy ion jet measurements (\cite{ATLAS502FFConf}). Truth jets were associated with the nearest reconstructed jet using the matching of the $\dR<0.2$ for the performance study and to build response matrices for the unfolding procedure. The same \dR\ matching criteria were employed in previous ATLAS HI jet analyses and are justified by a detailed performance study~\cite{Aad:12081967v1}. To prevent nearby jets from distorting the measurement of \Dptr\ distributions, 
 jets are rejected if there is another jet with a higher \ptjet\ than the considered jet anywhere
 within a distance of $\Delta R < 1.0$. The isolation cut removes approximately 0.01\% of jets (see Figure \ref{fig:ISO}), and has almost no impact on the final measurement.
@@ -274,7 +274,7 @@ The final efficiency corrections applied were determined and applied as a functi
 The rate of fake tracks was evaluated and extensively studied in Ref.~\cite{ATLAS502FFConf} in the \pp, \pbpb\ HIJING MC, and in \pbpb\ MC+overlay samples. The MC overlay sample is used to crosscheck the fake rate at higher \pt, but is not used for any corrections. It was shown that as the \pttrk\ approaches the  \ptjet\ the fraction of fake tracks increases due to the steeply falling spectra of generator level tracks. Figures~\ref{fig:fakeratepp} and~\ref{fig:fakeratepbpb} show the fraction of tracks that are identified as fakes, secondaries, or part of UE in case of \PbPb\ collisions as a function of \pttrk\ for selections in \ptjet in
 \pp\ and \pbpb\ collisions, respectively.  The rate 
 decreases with \pttrk\ up to approximately 10~GeV and then remains constant until \pttrk\ approaches \ptjet\
-where the rate increases again.  In \pbpb\ collisions, the ``fake'' rate also includes tracks which are from the underlying event from the real collisions into which the jet is overlaid.  The rate of these underlying event tracks increases with decreasing \pttrk\ and increasing collision centrality. The contribution from UE is negligible for tracks with \pT\ above 10 GeV as no centrality dependence is seen. The Fig.~\ref{fig:fakeratepbpb} excludes the very low \pT\ region where the distribution would be completely dominated by the UE. The size of the UE is then presented further in Fig.~\ref{fig:UEimpact_r2}-\ref{fig:UEimpact_r6}. To separate the contribution of UE tracks (see section~\ref{sec:cuts_UE}) from the fake tracks in \PbPb\ collisions and cross-check the centrality dependence of the fake rate, 0.2M MB \PbPb\ fully reconstructed HIJING MC~\cite{Wang:1991hta} events was used. The HIJING MC generator is capable of simulating global properties of HI collisions. The estimated fake rate of tracks associated with jets with $\pT>40 GeV$ is at the level of 1\% and it exhibits similar behavior as observed in Fig.~\ref{fig:fakeratepbpb}. No significant dependence of the fake rate on the collision centrality was found~\cite{ATLAS502FFConf}.
+where the rate increases again.  In \pbpb\ collisions, the ``fake'' rate also includes tracks which are from the underlying event from the real collisions into which the jet is overlaid.  The rate of these underlying event tracks increases with decreasing \pttrk\ and increasing collision centrality. The contribution from UE is negligible for tracks with \pT\ above 10 GeV as no centrality dependence is seen. The Fig.~\ref{fig:fakeratepbpb} excludes the very low \pT\ region where the distribution would be completely dominated by the UE. The size of the UE is then presented further in Fig.~\ref{fig:UEimpact_r2}-\ref{fig:UEimpact_r6}. To separate the contribution of UE tracks (see section~\ref{sec:cuts_UE}) from the fake tracks in \PbPb\ collisions and cross-check the centrality dependence of the fake rate, 0.2M MB \PbPb\ fully reconstructed HIJING MC~\cite{Wang:1991hta} events was used. The HIJING MC generator is capable of simulating global properties of HI collisions. The estimated fake rate of tracks associated with jets with $\pT>40$ GeV is at the level of 1\% and it exhibits similar behavior as observed in Fig.~\ref{fig:fakeratepbpb}. No significant dependence of the fake rate on the collision centrality was found~\cite{ATLAS502FFConf}.
   
   \begin{figure}[ht]
   \centerline{
@@ -304,7 +304,7 @@ where the rate increases again.  In \pbpb\ collisions, the ``fake'' rate also in
   \end{figure}
 
 
-To correct for the contribution from fake and secondary particles, $\Dptr^{TM}$ distributions are estimated in the similar way as measured \Dptr distributions, but only reconstructed tracks that do not not matched to truth tracks by criteria described in previous paragraphs are used. These fake $\Dptr^{TM}$ distributions are then subtracted from the measured distributions both in the data and MC. This procedure is applied for tracks above 10 GeV in \PbPb\ collisions and for tracks above 1 GeV in \pp\ collisions.  The correction also removes any residual UE above 10~GeV in case of \PbPb. The choice of the 10 GeV cut is based on the centrality dependence of the rate of truth-unmatched tracks in MC overlay samples shown in Fig.~\ref{fig:fakeratepbpb}. The correction for UE, fake and secondary tracks bellow 10 GeV in \PbPb\ collisions is discussed in the next section.
+To correct for the contribution from fake and secondary particles, $\Dptr^{\mathrm{TM}}$ distributions are estimated in the similar way as measured \Dptr\ distributions, but only reconstructed tracks that do not not matched to truth tracks by criteria described in previous paragraphs are used. These fake $\Dptr^{\mathrm{TM}}$ distributions are then subtracted from the measured distributions both in the data and MC. This procedure is applied for tracks above 10 GeV in \PbPb\ collisions and for tracks above 1 GeV in \pp\ collisions.  The correction also removes any residual UE above 10~GeV in case of \PbPb. The choice of the 10 GeV cut is based on the centrality dependence of the rate of truth-unmatched tracks in MC overlay samples shown in Fig.~\ref{fig:fakeratepbpb}. The correction for UE, fake and secondary tracks below 10 GeV in \PbPb\ collisions is discussed in the next section.
 
 \clearpage
 
@@ -313,80 +313,36 @@ To correct for the contribution from fake and secondary particles, $\Dptr^{TM}$ 
 
 The underlying event subtraction performed on the calorimetric jet energy is described in Sec.~\ref{sec:reconstruction}. Charged particles from the nucleon-nucleon scatterings that are not associated with the hard scattering in question constitute a background to the \Dptr\ distributions that needs to be subtracted from the measured distributions. This background strongly depends on the collisions centrality and on the charged particle \pt. In the measurement of the inclusive jet fragmentation functions it was found that the UE contribution is negligible for charged particles with $\pt>10$~GeV~\cite{PbPb5TeVIntNote}. This can be seen in the centrality dependence of the combined rate of fake and underlying event charged particles shown in Fig.~\ref{fig:fakeratepbpb} where no significant centrality dependence is observed for track above 10 GeV. 
 
+Two methods are used to estimate the underlying event for this analysis. The nominal "MC method", and the alternative "Cone method". The former uses $\mathrm{d}N_{\mathrm{ch}}/\mathrm{d}\phi\mathrm{d}\eta(\mathrm{cent},\pt, \mathrm{d}\Psi_{\mathrm{ch}})$ distributions of charged particles in MC overlay events, while the latter evaluates the underlying event on an event-by-event basis using a grid of cones. 
 
-The UE contribution to a given annulus around the jet is estimated using MB events where the $\mathrm{d}N_{\mathrm{ch}}/\mathrm{d}\phi\mathrm{d}\eta(\mathrm{cent},\pt, \mathrm{d}\Psi_{\mathrm{ch}})$ distributions of charged particles are estimated, where $\Psi$ is determined from the energy of the forward calorimeter. These distribution are evaluated as a function of charged particle \pt, collision centrality and angular distance, $\mathrm{d}\Psi_{\mathrm{ch}}$, with respect to the reaction plane angle $\Psi$. They are then used to estimate average number of UE charged particles in given annulus around a jet, $\nchUE^{\mathrm{MB}}(\eta_{\mathrm{jet}}, \phi_{\mathrm{jet}}, \mathrm{d}\Psi_{\mathrm{jet}})$, with given $\eta_{\mathrm{jet}}$, $\phi_{\mathrm{jet}}$, and $\mathrm{d}\Psi_{\mathrm{jet}}$ positions. Examples of the $\nchUE^{\mathrm{MB}}$ distributions for three different annuli, three intervals of the angular distance between jet and the reaction plane,  two different collision centrality classes and charged particle \pt\ intervals are shown in Fig.~\ref{fig:nchcore1}-\ref{fig:nchcore3}. The number of UE particles associated with jet decreases with size of the annulus, decreasing centrality, increasing track \pT\ and increasing distance to the reaction plane. The difference in the centrality distribution between MB data and the jet triggered sample is accounted for by a reweighing procedure to match the centrality distribution in the jet triggered data samples.
+\subsubsection{MC Method}
 
-The resulting UE charged particle contributions to measured \Dptr\ distributions, $\fd \nchUE/ \fd \pTch$ were evaluated over $1 < \pTch < 10$~\GeV\ as a function of charged particle \pT, \pTjet, and  collision centrality using the $\nchUE^{\mathrm{MB}}$ distributions convoluted with the $\eta_{\mathrm{jet}}$, $\phi_{\mathrm{jet}}$, and $\mathrm{d}\Psi_{\mathrm{jet}}$ distributions of jets in the jet triggered sample. By evaluating the UE yields only from events containing jets included in the analysis, the background automatically had the correct distribution of centralities within a given centrality bin.  
+%The UE contribution to a given annulus around the jet is estimated via $\mathrm{d}N_{\mathrm{ch}}/\mathrm{d}\phi\mathrm{d}\eta(\mathrm{cent},\pt, \mathrm{d}\Psi_{\mathrm{ch}})$ distributions of charged particles in MB overlay events.
 
-\begin{figure}[ht]
-\centerline{
-\begin{tabular}{ccc}
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi0_pt3_cent0.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi7_pt3_cent0.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi15_pt3_cent0.pdf} \\
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi0_pt5_cent0.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi7_pt5_cent0.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi15_pt5_cent0.pdf} \\
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi0_pt3_cent5.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi7_pt3_cent5.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi15_pt3_cent5.pdf} \\
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi0_pt5_cent5.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi7_pt5_cent5.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR0_dPsi15_pt5_cent5.pdf} \\
-\end{tabular}}
-\caption{
-Per jet $\nchUE^{\mathrm{MB}}$ distributions of charged particles evaluated in the core of the jet ($0.<r<0.05$) in MB events in three different intervals of angular distance with respect to the reaction plane angle going from left to right for two different selection of charged particle \pt\ and for two different centrality intervals.}
-\label{fig:nchcore1}
-\end{figure}
+In the MC method, $\Psi$ is determined from the energy of the forward calorimeter. These distribution are evaluated as a function of charged particle \pt, collision centrality and angular distance, $\mathrm{d}\Psi_{\mathrm{ch}}$, with respect to the reaction plane angle $\Psi$. They are then used to estimate average number of UE charged particles in given annulus around a jet, $\nchUE^{\mathrm{MBOverlay}}(\eta_{\mathrm{jet}}, \phi_{\mathrm{jet}}, \mathrm{d}\Psi_{\mathrm{jet}})$, with given $\eta_{\mathrm{jet}}$, $\phi_{\mathrm{jet}}$, and $\mathrm{d}\Psi_{\mathrm{jet}}$ positions. The tracks that go into making these distributions are part of the MB overlay and do not have a truth match, ensuring that the 
+
+Examples of the $\nchUE^{\mathrm{MBOverlay}}$ distributions for three different annuli (0--0.05, 0.25 -- 0.30, 0.60--0.70), in the $\mathrm{d}\Psi$ interval of  0.80 -- 1.00, for six collision centrality classes and for 1--1.6 GeV particles in 126 -- 158 GeV jets are shown in Fig.\ref{fig:ue_map}. The number of UE particles associated with a jet decreases with size of the annulus, decreasing centrality, increasing track \pT\ and increasing distance to the reaction plane. 
+
+The resulting UE charged particle contributions to measured \Dptr\ distributions, $\fd \nchUE/ \fd \pTch$ were evaluated over $1 < \pTch < 10$~\GeV\ as a function of charged particle \pT, \pTjet, and  collision centrality using the $\nchUE^{\mathrm{MBOverlay}}$ distributions convoluted with the $\eta_{\mathrm{jet}}$, $\phi_{\mathrm{jet}}$, and $\mathrm{d}\Psi_{\mathrm{jet}}$ distributions of jets in the jet triggered sample. By evaluating the UE yields only from events containing jets included in the analysis, the background automatically had the correct distribution of centralities within a given centrality bin.  
 
 \begin{figure}[ht]
 \centerline{
 \begin{tabular}{ccc}
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi0_pt3_cent0.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi7_pt3_cent0.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi15_pt3_cent0.pdf} \\
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi0_pt5_cent0.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi7_pt5_cent0.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi15_pt5_cent0.pdf} \\
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi0_pt3_cent5.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi7_pt3_cent5.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi15_pt3_cent5.pdf} \\
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi0_pt5_cent5.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi7_pt5_cent5.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR6_dPsi15_pt5_cent5.pdf} \\
+\includegraphics[width=0.7\textwidth]{figures_UE/eta_phi_map_dR0.pdf} \\
+\includegraphics[width=0.7\textwidth]{figures_UE/eta_phi_map_dR5.pdf} \\
+\includegraphics[width=0.7\textwidth]{figures_UE/eta_phi_map_dR9.pdf} \\
 \end{tabular}}
 \caption{
-Per jet $\nchUE^{\mathrm{MB}}$ distributions of charged particles evaluated in the core of the jet ($0.3<r<0.4$) in MB events in three different intervals of angular distance with respect to the reaction plane angle going from left to right for two different selection of charged particle \pt\ and for two different centrality intervals.}
-\label{fig:nchcore2}
-\end{figure}
-
-\begin{figure}[ht]
-\centerline{
-\begin{tabular}{ccc}
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi0_pt3_cent0.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi7_pt3_cent0.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi15_pt3_cent0.pdf} \\
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi0_pt5_cent0.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi7_pt5_cent0.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi15_pt5_cent0.pdf} \\
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi0_pt3_cent5.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi7_pt3_cent5.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi15_pt3_cent5.pdf} \\
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi0_pt5_cent5.pdf} &
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi7_pt5_cent5.pdf}&
-\includegraphics[width=0.33\textwidth]{figures_UE/h_UE_dR12_dPsi15_pt5_cent5.pdf} \\
-\end{tabular}}
-\caption{
-Per jet $\nchUE^{\mathrm{MB}}$ distributions of charged particles evaluated in the core of the jet ($1.0<r<1.2$) in MB events in three different intervals of angular distance with respect to the reaction plane angle going from left to right for two different selection of charged particle \pt\ and for two different centrality intervals.}
-\label{fig:nchcore3}
+Per jet $\nchUE^{\mathrm{MBOverlay}}$ distributions of charged particles evaluated in the jet core, at the jet edge, and far from the jet, for  $\mathrm{d}\Psi$ in the interval 0.8--1.00 for six centralities, 1--1.6 GeV tracks, and 126--158 GeV jets.}
+\label{fig:ue_map}
 \end{figure}
 
 
-The UE contribution needs to be further corrected for effects the correlation between UE and JER and correlation of the production of secondary particles~\footnote{Secondary particles comes from weak decays of $\Lambda$, $K_{S}$, $\Xi$, $\Sigma$, $\Omega$ and from particles created in interactions with the material.} with the jet production.
+
+%%%Cone method correction
+%The UE contribution needs to be further corrected for effects the correlation between UE and JER and correlation of the production of secondary particles~\footnote{Secondary particles comes from weak decays of $\Lambda$, $K_{S}$, $\Xi$, $\Sigma$, $\Omega$ and from particles created in interactions with the material.} with the jet production.
    
-Since the MC samples utilize the overlay procedure, where the real MB \PbPb\ collisions are used overlaid onto PYTHIA di-jets events, the UE distribution is the same as in data. The UE distributions thus can be alternatively calculated in MC samples from tracks that do not have an associated truth particle, $\fd \nchUE^{\mathrm{TM}}/ \fd \pTch$. This allowed us to study the size of the UE as a function of $r$ with respect to the jet axis. The UE estimated using this method is also needed to correct for the correlation between UE and JER and the enhancement of the rate of secondary particles in the jet which will be described below. The UE distribution normalized to unit area plotted as a function of $r$ with respect to the jet axis is shown in Fig.~\ref{fig:UEdR} for the lowest track \pt\ interval where the contribution of the UE is the largest. The two distributions represent the UE with and without the secondary particles. The UE strongly decreases with decreasing number of binary nucleon-nucleon as the collision centrality decreases. Only a very small dependence on the $r$ is seen for the UE when the secondary particles are not included. A small effect is expected as result of the pseudorapidity distribution of jets is enhanced towards the mid-rapidity region and the yields of UE particles decreases as a function of $\eta$, i.e. towards large $\Delta R$. As the secondary particles are generated by primary PYTHIA particles it is expected to see the enhancement towards the core of the jet when the multiplicity of primary particles is increased.      
-  
-  \begin{figure}[ht]
+     \begin{figure}[ht]
      \centerline{
         \includegraphics[width=0.9\textwidth]{figures_UE/UE_v_dR_pt1GeV.pdf}
      }
@@ -394,6 +350,9 @@ Since the MC samples utilize the overlay procedure, where the real MB \PbPb\ col
      \label{fig:UEdR}
   \end{figure}   
 
+
+Since the MC samples utilize the overlay procedure, where the real MB \PbPb\ collisions are used overlaid onto PYTHIA di-jets events, the UE distribution is the same as in data. The UE distributions can alternatively be calculated in MC samples from tracks that do not have an associated truth particle, $\fd \nchUE^{\mathrm{TM}}/ \fd \pTch$. This allowed us to study the size of the UE as a function of $r$ with respect to the jet axis. The UE estimated using this method is also needed to correct for the correlation between UE and JER and the enhancement of the rate of secondary particles in the jet which will be described below. The UE distribution normalized to unit area plotted as a function of $r$ with respect to the jet axis is shown in Fig.~\ref{fig:UEdR} for the lowest track \pt\ interval where the contribution of the UE is the largest. The two distributions represent the UE with and without the secondary particles. The UE strongly decreases with decreasing number of binary nucleon-nucleon as the collision centrality decreases. Only a very small dependence on the $r$ is seen for the UE when the secondary particles are not included. A small effect is expected as result of the pseudorapidity distribution of jets is enhanced towards the mid-rapidity region and the yields of UE particles decreases as a function of $\eta$, i.e. towards large $\Delta R$. As the secondary particles are generated by primary PYTHIA particles it is expected to see the enhancement towards the core of the jet when the multiplicity of primary particles is increased.      
+  
 
 The interplay between the UE and the JER will be described in this paragraph and is discussed in details in Ref.~\cite{ATLAS-COM-PHYS-2012-1653}. Due to the steeply falling nature of the jet \pt\ spectra, the smearing due to jet energy resolution leads to a net migration of jets from lower \pt\ to higher \pt\ values (hereafter referred to as ``upfeeding'') such that a jet reconstructed with a given \pTrec\ will correspond, on average, to a lower truth jet \pT, \avgpttrue. The upfeeding was observed to induce in the MC a difference between the UE yields determined using the MB events and the actual UE contribution to reconstructed jets. The magnitude of this difference was found to be centrality dependent and exhibited a weak \pTjet\ dependence. That difference was found to result from
 intrinsic correlations between the UE contribution to the yield of particles measured inside the jet and the MC \pTjet\ shift, $\Delta p_{\mathrm{T}}^{\mathrm{jet}}= \pTrec - \pTtrue$.  In particular, jets with positive (negative) $\Delta p_{\mathrm{T}}^{\mathrm{jet}}$ were found to have an UE contribution larger (smaller) than jets with $\Delta p_{\mathrm{T}}^{\mathrm{jet}} \sim 0$.  

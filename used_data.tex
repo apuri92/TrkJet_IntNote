@@ -51,13 +51,13 @@ description & data set names & \# runs \\ \hline
 
 %The data used in this study utilize the jet triggered data samples grouped into Hard Probe (HP) stream. 
 
-To maintain efficiency for events containing hard probes a specific jet triggers are used. First, events are identified at the L1 trigger by various L1 triggers. These L1 ``seeds'' are passed to the High Level Trigger (HLT) where jet trigger algorithm with various thresholds on \pT\ of the jet was used for the final selection. 
+To maintain efficiency for events containing hard probes specific jet triggers are used. First, events are identified at the L1 trigger by various L1 triggers. These L1 ``seeds'' are passed to the High Level Trigger (HLT) where jet trigger algorithm with various thresholds on \pT\ of the jet was used for the final selection. 
 
 Low \pT\ HLT jet triggers in \pp\ collisions were seeded by L1 MB random trigger ($\texttt{L1RD0}$) or L1 triggers requiring different thresholds on total energy in the calorimeter ($\texttt{L1TE}$). High \pT\ HLT jet triggers in \pp\ collisions were seeded by different L1 jet triggers performing a simple sliding window algorithm to find jet candidates ($\texttt{L1J}$). In \PbPb\ collisions, L1 total energy triggers were used to seed all HLT jet trigger chains.
 
 We analyze jets selected from jet triggers in the region of jet \pt\ for which the triggers are fully efficient\footnote{Efficiency is better than 99\%} for jets. Since the analysis only used jets above 100 GeV, the appropriate triggers were selected. For \pp, only the {\footnotesize{HLT\_j85}} trigger (fully efficient above 88.8 GeV) was used. For \pbpb\, the only trigger used was the {\footnotesize{HLT\_j75\_ion\_L1TE50}} (fully efficient above 91 GeV).
    
-  The performance of the jet trigger in 2015 is described in~\cite{HITMF} and the trigger efficiency is presented in Figure~\ref{Fig:Trigger_pp5} (\pp\ collisions) and Figure~\ref{fig:Trigger_PbPb} (\pbpb\ collisions). The trigger efficiency for two low thresholds is evaluated using MB events. The low \pT\ thresholds are used as the reference to evaluate the performance at higher \pT. The efficiency for the higher threshold is bootstrap from lower thresholds. The broader turn-on of the jet trigger in \pbpb\ compared to \pp\ collisions is caused by significant differences between the HI jet trigger reconstruction algorithm used at the time of the data taking and the current version of the offline reconstruction software.
+  The performance of the jet trigger in 2015 is described in~\cite{HITMF} and the trigger efficiency is presented in Figure~\ref{Fig:Trigger_pp5} (\pp\ collisions) and Figure~\ref{fig:Trigger_PbPb} (\pbpb\ collisions). The trigger efficiency for two low thresholds is evaluated using MB events. The low \pT\ thresholds are used as the reference to evaluate the performance at higher \pT. The efficiency for the higher threshold is bootstraped from lower thresholds. The broader turn-on of the jet trigger in \pbpb\ compared to \pp\ collisions is caused by significant differences between the HI jet trigger reconstruction algorithm used at the time of the data taking and the current version of the offline reconstruction software.
 
   \begin{figure}[h]
  \centerline{
@@ -77,7 +77,31 @@ We analyze jets selected from jet triggers in the region of jet \pt\ for which t
     \label{fig:Trigger_PbPb}
  \end{figure}
 
-In addition to the jet triggered sample, two separate MB data sample are used: 1) to estimate the underlying event contribution of charged particles to measured distributions; 2) to study detector performance in conditions that match the data. The first sample was recorded by MB triggers requiring either to have the transverse energy in the whole calorimeter exceeding 50 GeV at the Level-1 trigger (HLT\_noalg\_mb\_L1TE50) or to have a track reconstructed in the inner detector in coincidence with ZDC signals on both sides (HLT\_mb\_sptrk\_ion\_L1ZDC\_A\_C\_VTE50). The second sample was recorded with the MB trigger defined by a logical OR of the total energy trigger with a threshold of 50~\GeV\ and the ZDC coincidence trigger. This sample was used because it was utilized in the MC overlay procedure. Furthermore, two total transverse-energy triggers requiring 1.5~\TeV\ and 6.5~\TeV\ were used to enhance higher multiplicity events.
+In addition to the jet triggered sample, a MB triggered sample defined by a logical OR of the total energy trigger with a threshold of 50~\GeV\ and the ZDC coincidence trigger was used as part of the MC overlay procedure
+
+The event fraction as a function of run number  for both the hard probes stream and the minimum bias overlay stream is shown in Fig.~\ref{fig:evnt_fraction}
+
+ \begin{figure}[h]
+    \centerline{
+       \includegraphics[width=0.75\textwidth]{figures_general/EventPercentages.pdf}
+    }
+    \caption{Event fraction as a function of runs for Hard Probes and the Minimum Bias Overlay Streams.}
+    \label{fig:evnt_fraction}
+ \end{figure}
+
+The run dependence of the underlying event (a core part of this measurement) was tested by dividing the data and MC into three periods with approximately equal number of events in each period: 286711 -- 287259, 287270 -- 287632, and 287706 -- 287931. This was done because the underlying event estimation procedure was limited with the reduced statistics when looking at each individual run. The stability of the underlying event is shown in Fig.\ref{fig:weighted_runs}. The systematic uncertainty associated with the run dependence was included in the calculation of the systematic uncertainty on the result.
+
+ \begin{figure}[h]
+    \centerline{
+       \includegraphics[width=0.75\textwidth]{figures_general/weightedRuns.pdf}
+    }
+    \caption{Stability of the underlying event for three different periods of the data taking. The different curves indicate the ratio of the underlying event in each period of data taking to the underlying event determined in the entire dataset.}
+    \label{fig:weighted_runs}
+ \end{figure}
+
+
+
+% two separate MB data sample are used: 1) to estimate the underlying event contribution of charged particles to measured distributions; 2) to study detector performance in conditions that match the data. The first sample was recorded by MB triggers requiring either to have the transverse energy in the whole calorimeter exceeding 50 GeV at the Level-1 trigger (HLT\_noalg\_mb\_L1TE50) or to have a track reconstructed in the inner detector in coincidence with ZDC signals on both sides (HLT\_mb\_sptrk\_ion\_L1ZDC\_A\_C\_VTE50). The second sample was recorded with the MB trigger defined by a logical OR of the total energy trigger with a threshold of 50~\GeV\ and the ZDC coincidence trigger. This sample was used because it was utilized in the MC overlay procedure. Furthermore, two total transverse-energy triggers requiring 1.5~\TeV\ and 6.5~\TeV\ were used to enhance higher multiplicity events.
 
 %
 %   \begin{table}[h]
