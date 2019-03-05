@@ -325,6 +325,7 @@ The underlying event subtraction performed on the calorimetric jet energy is des
 Two methods are used to estimate the underlying event for this analysis. The nominal "Map method", and the alternative "Cone method" to provide a systematic uncertainty. The former uses charged particle distributions of $\mathrm{d}N_{\mathrm{ch}}/\mathrm{d}\phi\mathrm{d}\eta(\mathrm{cent},\pt, \mathrm{d}\Psi_{\mathrm{ch}})$ in MC overlay events, while the latter evaluates the underlying event on an event-by-event basis using a grid of cones. 
 
 \subsubsection{Map Method}
+\label{sec:map_method}
 
 %The UE contribution to a given annulus around the jet is estimated via $\mathrm{d}N_{\mathrm{ch}}/\mathrm{d}\phi\mathrm{d}\eta(\mathrm{cent},\pt, \mathrm{d}\Psi_{\mathrm{ch}})$ distributions of charged particles in MB overlay events.
 
@@ -356,6 +357,7 @@ The map method can be applied in data to measure the UE charged particle contrib
   \end{figure}   
 
 \subsubsection{Cone Method}
+\label{sec:cone_method}
 The cone method uses a regular grid of 9 cones of size $R = 0.8$ covering the full inner detector region (shown in Fig.\ref{fig:cone_grid}). The size of the cone corresponds to the radial phase space being investigated (0.8 in this case). Cones within a distance of $dR = 1.6$ to a reconstructed jet are excluded if $\ptjet > 90$ GeV. They are also excluded if they contain a track with $\pt > 10$ GeV. The 10 GeV was cut was chosen based on the centrality dependence of the combined rate of fake and underlying event tracks shown in Fig.\ref{fig:fakeratehijing}. No significant dependence is observed for tracks above 10 GeV. The fraction of events as a function of number of cones used is shown in Fig.\ref{fig:cone_stats}. It can be seen that in MC, the number of cones used is consistent with there being no jet quenching. In data, quenching leads to only one jet causing exclusions, consistent with most events using 7 cones. . 
 
 \begin{figure}[ht]
@@ -502,6 +504,8 @@ Instrumental effects are corrected by an unfolding procedure. This analysis uses
 
 \end{itemize}
 
+ To achieve better correspondence with the data, the response matrices for both the one and two dimensional unfolding are reweighed so that the distributions match the shapes in the reconstructed data.
+ 
 %The closure of the unfolding is checked by applying the response matrices from MC to the reconstructed spectra in MC.
 
 \subsubsection{One Dimensional Unfolding for Jet Spectra}

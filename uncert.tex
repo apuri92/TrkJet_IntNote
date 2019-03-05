@@ -34,9 +34,10 @@ The systematic uncertainties on the \Rdptr\ distributions for a selection of tra
 \begin{figure}
 \centering{
 \begin{tabular}{cc}
-	 \includegraphics[page=1, width=0.85\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} \\
-	 \includegraphics[page=3, width=0.85\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} \\
-	 \includegraphics[page=5, width=0.85\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} \\
+	 \includegraphics[page=1, width=0.50\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} 	
+	 \includegraphics[page=3, width=0.50\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} \\
+	 \includegraphics[page=5, width=0.50\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} 
+	 \includegraphics[page=6, width=0.50\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} \\
 \end{tabular} }
    \caption{A summary of the systematic uncertainties on \RDptr\ distributions for different track \pt, bins, for jets with \pt\ 125--158 \GeV\ , as a function of \rvar\ for different centrality bins. The uncertainties from the JES, JER, UE, and Tracking  are shown, along with the total systematic uncertainty from all sources. }
       \label{fig:rdptr_sys_uncert}
@@ -45,8 +46,7 @@ The systematic uncertainties on the \Rdptr\ distributions for a selection of tra
 
 
 
-The systematic uncertainties have been evaluated separately for \Dptr\ distributions and for their ratios, as a function of jet \pT\ for \pp\ and \pbpb\ collisions. 
-For each systematic variation, the entire unfolding procedure is repeated (2D unfolding of the fragmentation
+The systematic uncertainties have been evaluated separately for \Dptr\ distributions and for their ratios, as a function of jet \pT\ for \pp\ and \pbpb\ collisions. For each systematic variation, the entire unfolding procedure is repeated (2D unfolding of the fragmentation
 functions as a function of \ptjet\, the 1D unfolding of the single \ptjet\ spectrum and the bin-by-bin correction for position resolution). This is necessary because the jets are in both the 2D and the 1D unfolding procedures and must be treated in a consistent manner throughout the analysis (e.g. a shift in the JES should 
 shift jets in the fragmentation functions as a function of \ptjet\ in the same manner
 that the single jet spectrum itself is shifted).
@@ -131,67 +131,59 @@ where $q$ is charge of the track and $\delta_{sagitta}(\eta, \phi)$ is uncertain
 %The resulting systematic uncertainty is $<<1$\% for low and intermediate $z$ and \pT\ and reaches up to 4\% at high $z$. As the source of the shift is present both in \pp\ and \PbPb\ it does partially cancel in the ratios.  
 
 \subsection{Systematic uncertainty due to unfolding}
-The systematic uncertainty associated with the unfolding is connected with the sensitivity of the unfolding procedure to the choice of the input distributions. The systematic is evaluated by generating response matrices from the MC distributions with an additional reweighting factor so as to match the jet and charged particle distributions in data, and then unfolding the data using these modified response matrices. The reweighting of the track \pt\ has a minimal effect because of the good track momentum resolution in the kinematic region of interest. The uncertainty is evaluated by comparing the nominal result with the reweighted result, and is considered to be uncorrelated between \pbpb\ and \pp.
+The systematic uncertainty associated with the unfolding is connected with the sensitivity of the unfolding procedure to the choice of the input distributions. The systematic is evaluated by generating response matrices from the MC distributions without the reweighting factor that is used to match the jet spectrum and \Dptr\ distributions in data, and then unfolding the data using these response matrices. This has minimal effect on track \pt\ because of the good track momentum resolution in the kinematic region of interest. The uncertainty is evaluated by comparing the nominal result with the un-reweighed result, and is considered to be uncorrelated between \pbpb\ and \pp.
 
 
 \subsection{Systematic uncertainty due to the UE event subtraction}
-The systematic uncertainty associated with the estimation of the UE is estimated by comparing the UE evaluated by two different methods. The UE estimated using the MB events that are described in the section~\ref{sec:cuts_corrections} is compared to UE estimated using using random cone method that was used in the in the previous study on inclusive jet fragmentation functions. A short summary of the method follows. More details can be found in Ref.~\cite{PbPb5TeVIntNote}. 
+The systematic uncertainty associated with the estimation of the UE has two main components: one is the statistical uncertainty on the $\eta-\phi$ maps used in the map method (described in section~\ref{sec:map_method}) , and the other is the comparison of the map method to the alternative cone method (described in section~\ref{sec:cone_method}. More details on the cone method can be found in Ref.~\cite{PbPb5TeVIntNote}. 
 
-The UE contribution is determined using a grid of \RFour\ cones spanning the full coverage of the inner detector. The method is applied on events containing jets included in the analysis. The cones have a fixed distance between their centers chosen such that the inner detector acceptance is uniformly covered while avoiding overlaps. Any cone having a charged particle with $\pT>10$~\GeV\ or overlapping with a reconstructed jet with $\ptjet > 90$ \GeV\  is assumed to be associated with a 
-hard process and is excluded from the UE estimation.
-
-The resulting UE charged-particle yields,  $\fd \nchUE/ \fd \z$ or $\fd \nchUE/ \fd \pttrk$, are evaluated over $1 < \pttrk < 10$~\GeV\ according to:
-	\begin{eqnarray}
-	\label{eq:background1}
-	\dfrac{\fd \nchUE}{ \fd \pttrk} &=&
-	\dfrac{1}{\Ncone}
-        \dfrac{1}{\varepsilon(\pttrk,\etatrk)}
-        \dfrac{\Delta N_{\mathrm{ch}}^{\mathrm{cone}}(\pttrk,\ptjet,
-	  \yjet)}{\Delta \pttrk}.
-	\end{eqnarray}
-The \Ncone\ is the number of background cones used in the UE determination of a given jet, $\Delta N_{\mathrm{ch}}^{\mathrm{cone}}$ represents the number of charged particles summed over all background cones, and $\Delta R$ represents the distance between the center of a cone and the direction of a given charged particle. The $\varepsilon(\pttrk,\etatrk)$ is the efficiency for reconstructing charged particles estimated as a function of \pttrk\ and \etatrk\ without requirement on the track-to-jet association.
+\subparagraph{Uncertainty from map statistic:} 
+The $\eta-\phi$ maps used in the estimation of the underlying event are sparsely populated for high track \pt\ and high \ptjet, and thus there is a significant statistical uncertainty that needs to be accounted for. To propagate this uncertainty, a gaussian distribution with its mean being the bin content and width being the bin error is used. The gaussian distribution is then used to pick out values that are used to estimate the underlying event. This procedure is repeated 100 times, and the distribution of the relative difference between each of the underlying events estimated with the shifted value and the nominal value ( $\delta (\mathrm{UE}) = \mathrm{GausWidth}(\mathrm{UE}_i - \mathrm{UE}_{\mathrm{nominal}} / \mathrm{UE}_{\mathrm{nominal}})$ is fit to a gaussian. The width of this gaussian is taken to be the systematic uncertainty, and to be conservative, is symmetrized. A few examples of the distribution of normalized relative differences can be seen in Fig. \ref{fig:gaus_diff}. The size of the systematic from this can be seen in Fig.\ref{fig:mapstat_corr}.
 
 \begin{figure}
 \centering{
 \begin{tabular}{cc}
-	 \includegraphics[width=0.55\textwidth]{figures_systematics/h_UE_comparison_cent0} &
-	 \includegraphics[width=0.55\textwidth]{figures_systematics/h_UE_comparison_cent1} \\
-	 \includegraphics[width=0.55\textwidth]{figures_systematics/h_UE_comparison_cent2} &
-	 \includegraphics[width=0.55\textwidth]{figures_systematics/h_UE_comparison_cent3} \\
+	 \includegraphics[width=0.55\textwidth]{figures_systematics/g0} &
+	 \includegraphics[width=0.55\textwidth]{figures_systematics/g1} \\
+	 \includegraphics[width=0.55\textwidth]{figures_systematics/g2} &
+	 \includegraphics[width=0.55\textwidth]{figures_systematics/g3} \\
 \end{tabular} }
-   \caption{Comparison of the UE estimated by the two different methods in four collision centrality bins as a function of track and jet \pT.}
-      \label{fig:UEuncert1}
+   \caption{Examples of the relative differences between the nominal and shifted values of the underlying event, fit to a gaussian distribution. The width on the gaussian is taken as the systematic uncertainty on the underlying. Wider distributions indicate a larger statistical uncertainty on the bin content in the $\eta-\phi$ map used to estimate the UE.}
+      \label{fig:gaus_diff}
 \end{figure}
-
-The estimated contribution from the UE needs to be corrected for the difference in the average UE yield at a given \pttrk\ between the $\eta$ position of the cone and $\eta$ position of the jet. This correction is based on the centrality-, \pttrk-, and $\eta$-dependent distribution of charged-particle yields in MB
-data events. Separately, a correction is applied to the charged-particle UE estimate to account for the difference in the azimuthal particle density, due to elliptic flow, between the $\phi$ position of the cone and the $\phi$ position of the jet. This  utilizes a centrality- and \pttrk-dependent parameterization of the measured elliptic flow coefficients. The UE contribution is further corrected for the correlation between the actual UE yield underneath the jet and the jet energy resolution by the same method as used for default UE estimate.
 
 \begin{figure}[h]
     \centerline{
-       \includegraphics[width=0.75\textwidth]{figures_systematics/UE_uncert}
+       \includegraphics[width=0.75\textwidth]{figures_systematics/mapStatCorrection}
     }
-    \caption{Comparison of the UE estimated by the two different methods in three collision centrality bins as a function of track \pT.}
-    \label{fig:UEuncert2}
+    \caption{Size of the systematic uncertainty from the map statistic component, as a function for \rvar\ for 0-10\% \pbpb\ collisions, in 126-158 GeV jets, 1-1.6 GeV tracks.}
+    \label{fig:mapstat_corr}
  \end{figure}
 
-The difference between the two methods is shown in Fig.~\ref{fig:UEuncert1} and is found to be independent of jet \pT\ and exhibits a small centrality dependence. The uncertainty presented as the ratios between the two method averaged over jet \pT\ is shown in Fig.~\ref{fig:UEuncert2} is applied independent of \rvar\ and conservatively it is symmetrized. The absolute size of the uncertainty on the UE is typically small ($<<1$\%) however due to small signal-to-background ratio it is the dominant systematic uncertainty in central collisions, for lowest \pT\ tracks, and large \rvar.
 
-%As it is discussed in Sec~\ref{sec:cuts_corrections} such UE estimates differ by construction in the rate of fake and secondary particles and also the UE from unmatched charged particles accounts for the effect of correlation between the JER and size of UE. For the purpose of evaluating systematic uncertainties, the impact of those two contributions is removed. This is done in the following two steps:
-%\begin{enumerate}
-%\item Based on the barcode that is available in MC samples the secondary particles, whose production is strongly correlated with jet, are removed.
-%\item To suppress the effect when the UE underneath the jet is higher on average due to the convolution of steeply falling jet spectra and the JER, the UE from unmatched charged particles is estimated in intervals of corresponding truth jet \pT.    
-%\end{enumerate}         
 
-%\subsection{MC non-closure}
-%To make sure that all the sources of systematic uncertainties were covered the systematic uncertainty from the ”non-closure” in the MC was also evaluated. It was 
-%calculated as a deviation from unity of ratios of fully corrected and reconstructed fragmentation functions in MC %to the fragmentation functions
-%evaluated at the truth level. 
-%This uncertainty can be considered a measure of unknowns in the analysis, but it also includes fluctuations due to 
-%the finite statistics in the MC which are used to evaluate it (especially in high \z\ \pttrk\ regions of
-%the analysis.
-%The systematic uncertainty is taken to be uncorrelated between \pbpb\ and \pp. This uncertainty is small as the
-%closure is good (see Figure~\ref{fig:pbpbclosure}).  This systematic uncertainty is taken to be uncorrelated 
-%between \pbpb\ and \pp.
+
+\subparagraph{Uncertainty from cone method:} The difference between the two methods is shown in Fig.~\ref{fig:conemethod_corr} and is found vary slowly with \ptjet\ and track \pT. There is a  small centrality dependence, which is coming from fact that the underlying event strongly depends on the centrality.
+This uncertainty is conservatively symmetrized. The absolute size of the uncertainty on the UE is typically small however due to small signal-to-background ratio it is the dominant systematic uncertainty in central collisions, for lowest \pT\ tracks, and large \rvar.
+
+\begin{figure}
+\centerline{\includegraphics[page=2,width=1.\textwidth]{figures_systematics/UE_x_ratio}}
+    \caption{Size of the systematic uncertainty from the cone method, as a function for \rvar\ for 0-10\% \pbpb\ collisions, in 126-158 GeV jets, 1-1.6 GeV tracks.}
+    \label{fig:conemethod_corr}
+
+\end{figure}
+
+
+\subsection{MC non-closure}
+To make sure that all the sources of systematic uncertainties were covered the systematic uncertainty from the ”non-closure” in the MC was also evaluated. It was 
+calculated as a deviation from unity of ratios of fully corrected and reconstructed fragmentation functions in MC %to the fragmentation functions
+evaluated at the truth level. 
+This uncertainty can be considered a measure of unknowns in the analysis, but it also includes fluctuations due to 
+the finite statistics in the MC which are used to evaluate it (especially in high \z\ \pttrk\ regions of
+the analysis.
+The systematic uncertainty is taken to be uncorrelated between \pbpb\ and \pp. This uncertainty is small as the
+closure is good (see Figure~\ref{fig:pbpbclosure}).  This systematic uncertainty is taken to be uncorrelated 
+between \pbpb\ and \pp.
 
 \subsection{Correlations between the systematic uncertainties in \pbpb\ and \pp\ collisions}
 

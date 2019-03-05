@@ -5,9 +5,13 @@ intnote_area="/Users/Akshat/Dropbox/trackjet_corr_intnote/"
 cp "$local_area"/output_dev/unfold/output_pdf_nominal/EventAccept_pp.pdf "$intnote_area"/figures_general/EventAccept_pp.pdf
 cp "$local_area"/output_dev/unfold/output_pdf_nominal/EventAccept_PbPb.pdf "$intnote_area"/figures_general/EventAccept_PbPb.pdf
 cp "$local_area"/run_dep/EventPercentages_c47.pdf "$intnote_area"/figures_general/EventPercentages.pdf
+
+
 cp "$local_area"/weightedRuns.pdf "$intnote_area"/figures_general/weightedRuns.pdf
 cp "$local_area"/eta_phi_map*.pdf "$intnote_area"/figures_UE/
 cp "$local_area"/cone_stats_c47.pdf "$intnote_area"/figures_UE/cone_stats.pdf
+cp "$local_area"/g*.pdf "$intnote_area"/figures_systematics/
+cp "$local_area"/UE_x_ratio_c47.pdf "$intnote_area"/figures_systematics/UE_x_ratio.pdf
 
 
 #shape response (pos cor factors)
