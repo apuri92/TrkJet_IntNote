@@ -7,11 +7,11 @@ cp "$local_area"/output_dev/unfold/output_pdf_nominal/EventAccept_PbPb.pdf "$int
 cp "$local_area"/run_dep/EventPercentages_c47.pdf "$intnote_area"/figures_general/EventPercentages.pdf
 
 
-cp "$local_area"/weightedRuns.pdf "$intnote_area"/figures_general/weightedRuns.pdf
-cp "$local_area"/eta_phi_map*.pdf "$intnote_area"/figures_UE/
+cp "$local_area"/misc_conf_plots/weightedRuns.pdf "$intnote_area"/figures_general/weightedRuns.pdf
+cp "$local_area"/misc_conf_plots/eta_phi_map*.pdf "$intnote_area"/figures_UE/
 cp "$local_area"/cone_stats_c47.pdf "$intnote_area"/figures_UE/cone_stats.pdf
 cp "$local_area"/g*.pdf "$intnote_area"/figures_systematics/
-cp "$local_area"/UE_x_ratio_c47.pdf "$intnote_area"/figures_systematics/UE_x_ratio.pdf
+cp "$local_area"/UE_x_ratio_c0.pdf "$intnote_area"/figures_systematics/UE_x_ratio.pdf
 
 
 #shape response (pos cor factors)

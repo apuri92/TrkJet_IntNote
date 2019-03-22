@@ -54,10 +54,10 @@ The positive relative uncertainty was used to calculate the upper bound of the s
 
 \subsection{Jet energy scale uncertainty}
 
-The uncertainty on the JES for heavy ion jets has two parts.  The first part is taken from
-the \pp\ JES uncertainties for EMTopo jets and the second part is specific to the heavy ion jets
-and collision energies (for flavor related uncertainties).  For the \pp\ part we use the globally reduced
-set of 19 nuisance parameters described in Ref.~\cite{JESuncertaintytwiki}. Nuisance parameters that are not applicable for HI jet collections (pileup, b-jets, flavor and MC non closure) are removed or replaced (flavor uncertainties). The heavy ion specific components are from the cross calibration~\cite{cc2015} and the jet
+The uncertainty on the JES for heavy ion jets has two parts.  The first is taken from
+ \pp\ JES uncertainties for EMTopo jets while the second is specific to the heavy ion jets
+and collision energies (for flavor related uncertainties).  For the \pp\ part we use the strongly reduced
+set of 4 nuisance parameters (in Scenario 1) as described in Ref.~\cite{JESuncertaintytwiki}. Nuisance parameters that are not applicable for HI jet collections (pileup, b-jets, flavor and MC non closure) are removed or replaced (flavor uncertainties). The heavy ion specific components are from the cross calibration~\cite{cc2015} and the jet
 flavor uncertainties at 5.02~TeV~\cite{pPbIntNote}.  For each component of the variation
 the response matrices are regenerated with the shifted \ptjet:
 \begin{equation}
@@ -76,16 +76,15 @@ To account for systematic uncertainties due to disagreement between the jet ener
      The procedure to generate modified migration matrices follows the standard procedure applied in p+p jet measurements 
      and is used for both the \pp\ and \pbpb\ collisions. 
      The $\texttt{JetEnergyResolutionProvider}$ tool~\cite{JERUncertaintyProviderRun2} was used to 
-     retrieve uncertainty on the fractional resolution, $\sigma^{\mathrm{syst}}_{\mathrm{JER}}$ as a function of jet $\pt$ and $\eta$. An additional HI jet specific uncertainty was derived~\cite{cc2015} (this
-     uncertainty is for the HI jet collections and thus is applied to the jets in both \pp\ and \pbpb\
-     collisions). 
+     retrieve uncertainty on the fractional resolution, $\sigma^{\mathrm{syst}}_{\mathrm{JER}}$ as a function of jet $\pt$ and $\eta$. An additional HI jet specific uncertainty from the cross calibration of the HI jet collections ~\cite{cc2015} is applied to jets in both \pp\ and \pbpb\ collisions.
      The full JER uncertainty on 2015 \pp\ data is shown also in Ref.~\cite{Aad:1696485}
 
      The jet $\pt^{\mathrm{reco}}$ was then smeared by
      \begin{equation}
 	\pt^{\star, \mathrm{reco}} = \pt^{\mathrm{reco}}\times \mathcal{N}(1,\sigma^{\mathrm{eff}}_{\mathrm{JER}})\,,
      \end{equation}
-     where $\mathcal{N}(1,\sigma^{\mathrm{eff}}_{\mathrm{JER}})$ is the normal distribution with the effective resolution $\sigma^{\mathrm{eff}}_{\mathrm{JER}}=\sqrt{(\sigma_{\mathrm{JER}} + \sigma^{\mathrm{syst}}_{\mathrm{JER}})^{2} - \sigma_{\mathrm{JER}}^{2}}$. As this smearing is random the procedure is repeated 10 times.
+     where $\mathcal{N}(1,\sigma^{\mathrm{eff}}_{\mathrm{JER}})$ is the normal distribution with the effective resolution $\sigma^{\mathrm{eff}}_{\mathrm{JER}}=\sqrt{(\sigma_{\mathrm{JER}} + \sigma^{\mathrm{syst}}_{\mathrm{JER}})^{2} - \sigma_{\mathrm{JER}}^{2}}$.
+%      As this smearing is random the procedure is repeated 10 times.
 
      %The systematic uncertainties on the \Dptr\ distributions decreases with decreasing \pt\ and increasing jet \pT. The typical systematic uncertainty originating from JER changes varies from 10\% to 1\% depending on the jet \ET\ and $z$. 
 
@@ -94,7 +93,7 @@ To account for systematic uncertainties due to disagreement between the jet ener
 
 \paragraph{Track selection}  This uncertainty was estimated by tightening the tracking cuts by adding the cuts
 on the significance of $d_0$ and $z_0$ as described in the Section~\ref{sec:trackselection}.  
-The entire analysis is redone with these track selections and the difference from the nominal analysis is taken as the systematic uncertainty. 
+The entire analysis is redone with these track selections (including re-deriving the tracking efficiencies and the $\eta-\phi$ maps for the UE estimation) and the difference from the nominal analysis is taken as the systematic uncertainty. 
 
 
 %\paragraph{Tracking efficiency fits}  This uncertainty comes from the statistical uncertainty on the fits
@@ -105,16 +104,16 @@ The entire analysis is redone with these track selections and the difference fro
 \paragraph{Truth track definition}  
 This uncertainty quantifies robustness of the matching of reconstructed to truth particles.
 The uncertainty is taken as a difference in the final results obtained with  $MCprob>$ 0.3 
-and results obtained with $MCprob>$ 0.5. 
+and results obtained with $MCprob>$ 0.5. This systematic included a re-derivation of the $\eta-\phi$ maps for UE estimation. The change in tracking efficiency is negligible.
 
 
 \paragraph{Detector material description in simulation}
 The uncertainty on the inner detector material
-varies with \pttrk\ and \etatrk\ from 0.5\% to 2.0\%~\cite{ref:tracktwiki} on the efficiency correction.  
+varies with \pttrk\ and \etatrk\ from 0.5\% to 2.0\%~\cite{ref:tracktwiki} on the efficiency correction. This systematic also included a re-derivation of the $\eta-\phi$ maps for UE estimation.
 
 
 \paragraph{Tracking in dense environments}
-There is a 0.4\% uncertainty on the efficiency due to tracking in dense environments (the core of the jet)~\cite{ref:tracktwiki}.
+There is a 0.4\% uncertainty on the efficiency due to tracking in dense environments (the core of the jet)~\cite{ref:tracktwiki}. This systematic also included a re-derivation of the $\eta-\phi$ maps for UE estimation.
 
 
 \paragraph{Fake rate}
@@ -126,7 +125,7 @@ To account for a possible miss-alignment in \pp\ and \PbPb\ data, the reconstruc
 \begin{equation}
 \pt \rightarrow \pt \times (1 + q \times \pt \delta_{sagitta}(\eta, \phi))^{-1},
 \end{equation}
-where $q$ is charge of the track and $\delta_{sagitta}(\eta, \phi)$ is uncertainty on the track curvature. The uncertainty derived for 5.02~TeV \pp\ and \PbPb\ data is included in InDetTrackSystematicsTools-00-00-19. Due to statistical origin of the uncertainty the resulting systematic uncertainty is symmetrized. 
+where $q$ is charge of the track and $\delta_{sagitta}(\eta, \phi)$ is uncertainty on the track curvature. The uncertainty derived for 5.02~TeV \pp\ and \PbPb\ data is included in InDetTrackSystematicsTools-00-00-19. Due to statistical origin of the uncertainty the resulting systematic uncertainty is symmetrized. This systematic also included a re-derivation of the $\eta-\phi$ maps for UE estimation.
 
 %The resulting systematic uncertainty is $<<1$\% for low and intermediate $z$ and \pT\ and reaches up to 4\% at high $z$. As the source of the shift is present both in \pp\ and \PbPb\ it does partially cancel in the ratios.  
 
@@ -138,7 +137,7 @@ The systematic uncertainty associated with the unfolding is connected with the s
 The systematic uncertainty associated with the estimation of the UE has two main components: one is the statistical uncertainty on the $\eta-\phi$ maps used in the map method (described in section~\ref{sec:map_method}) , and the other is the comparison of the map method to the alternative cone method (described in section~\ref{sec:cone_method}. More details on the cone method can be found in Ref.~\cite{PbPb5TeVIntNote}. 
 
 \subparagraph{Uncertainty from map statistic:} 
-The $\eta-\phi$ maps used in the estimation of the underlying event are sparsely populated for high track \pt\ and high \ptjet, and thus there is a significant statistical uncertainty that needs to be accounted for. To propagate this uncertainty, a gaussian distribution with its mean being the bin content and width being the bin error is used. The gaussian distribution is then used to pick out values that are used to estimate the underlying event. This procedure is repeated 100 times, and the distribution of the relative difference between each of the underlying events estimated with the shifted value and the nominal value ( $\delta (\mathrm{UE}) = \mathrm{GausWidth}(\mathrm{UE}_i - \mathrm{UE}_{\mathrm{nominal}} / \mathrm{UE}_{\mathrm{nominal}})$ is fit to a gaussian. The width of this gaussian is taken to be the systematic uncertainty, and to be conservative, is symmetrized. A few examples of the distribution of normalized relative differences can be seen in Fig. \ref{fig:gaus_diff}. The size of the systematic from this can be seen in Fig.\ref{fig:mapstat_corr}.
+The $\eta-\phi$ maps used in the estimation of the underlying event are sparsely populated for high track \pt\ and high \ptjet, and are susceptible to statistical fluctuations. To take this into account, 100 pseudo-experiments are conducted to re-estimate the set of maps, with a bin-by-bin gaussian variation where the mean and standard deviation were taken to be the bin content and bin error from the nominal set of maps. The distribution of the relative difference between each estimation of the shifted underlying event and and the nominal value ( $\delta (\mathrm{UE}) = \mathrm{GausWidth}(\mathrm{UE}_i - \mathrm{UE}_{\mathrm{nominal}} / \mathrm{UE}_{\mathrm{nominal}})$ is fit to a gaussian, and the width is taken to be the systematic uncertainty. This uncertainty is symmetrized to be conservative.  A few examples of the distribution of normalized relative differences can be seen in Fig. \ref{fig:gaus_diff}. The size of the systematic from this can be seen in Fig.\ref{fig:mapstat_corr}.
 
 \begin{figure}
 \centering{
@@ -175,16 +174,21 @@ This uncertainty is conservatively symmetrized. The absolute size of the uncerta
 
 
 \subsection{MC non-closure}
-To make sure that all the sources of systematic uncertainties were covered the systematic uncertainty from the â€non-closureâ€ in the MC was also evaluated. It was 
-calculated as a deviation from unity of ratios of fully corrected and reconstructed fragmentation functions in MC %to the fragmentation functions
+To make sure that all the sources of systematic uncertainties were covered the systematic uncertainty from the non-closure€ in the MC was also evaluated. It was 
+calculated as a deviation from unity of ratios of fully corrected and reconstructed charged particle distributions in MC to the charged particle distributions
 evaluated at the truth level. 
 This uncertainty can be considered a measure of unknowns in the analysis, but it also includes fluctuations due to 
-the finite statistics in the MC which are used to evaluate it (especially in high \z\ \pttrk\ regions of
-the analysis.
-The systematic uncertainty is taken to be uncorrelated between \pbpb\ and \pp. This uncertainty is small as the
-closure is good (see Figure~\ref{fig:pbpbclosure}).  This systematic uncertainty is taken to be uncorrelated 
-between \pbpb\ and \pp.
+the finite statistics in the MC which are used to evaluate it (especially in high \pttrk\ regions of
+the analysis. The non-closure can be seen in Fig.~\ref{fig:pbpbclosure}).  
+The systematic uncertainty is taken to be uncorrelated between \pbpb\ and \pp 
 
+
+\begin{figure}
+\centerline{\includegraphics[page=2,width=1.\textwidth]{figures_systematics/UE_x_ratio}}
+    \caption{Size of the systematic uncertainty from the cone method, as a function for \rvar\ for 0-10\% \pbpb\ collisions, in 126-158 GeV jets, 1-1.6 GeV tracks.}
+    \label{fig:pbpbclosure}
+
+\end{figure}
 \subsection{Correlations between the systematic uncertainties in \pbpb\ and \pp\ collisions}
 
 Due to the common analysis and reconstruction procedure, and detector conditions, the systematic uncertainties are correlated between the \pp\ and
