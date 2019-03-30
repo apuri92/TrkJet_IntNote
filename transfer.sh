@@ -11,15 +11,20 @@ cp -a "$local_area"/misc_conf_plots/weightedRuns.pdf "$intnote_area"/figures_gen
 cp -a "$local_area"/misc_conf_plots/eta_phi_map*.pdf "$intnote_area"/figures_UE/
 cp -a "$local_area"/misc_conf_plots/cone_stats.pdf "$intnote_area"/figures_UE/cone_stats.pdf
 cp -a "$local_area"/misc_conf_plots/map_stat_gaus.pdf "$intnote_area"/figures_systematics/map_stat_gaus.pdf
-cp -a "$local_area"/UE_x_ratio_c0.pdf "$intnote_area"/figures_systematics/UE_x_ratio.pdf
+cp -a "$local_area"/UE_x_ratio_c0.pdf "$intnote_area"/figures_UE/UE_x_ratio.pdf
 cp -a "$local_area"/misc_conf_plots/map_stat_size.pdf "$intnote_area"/figures_systematics/map_stat_size.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_sys3/PbPb/ChPS_final_dR_PbPb_MC.pdf "$intnote_area"/figures_systematics/ChPS_final_dR_PbPb_MC.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/RatioProj_PbPb.pdf "$intnote_area"/figures_corrections/RatioProj_PbPb.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/RatioProj_pp.pdf "$intnote_area"/figures_corrections/RatioProj_pp.pdf
-cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/systematics/RDpT_dR_sys_error.pdf "$intnote_area"/figures_systematics/RDpT_dR_sys_error.pdf
-cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/systematics/ChPS_dR_sys_PbPb_error.pdf "$intnote_area"/figures_systematics/ChPS_dR_sys_PbPb_error.pdf
-cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/systematics/ChPS_dR_sys_pp_error.pdf "$intnote_area"/figures_systematics/ChPS_dR_sys_pp_error.pdf
+cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/systematics/Summary*.pdf "$intnote_area"/figures_systematics/
+
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/ChPS_FF_final_injet_ratio_data.pdf "$intnote_area"/figures_results/ChPS_FF_final_injet_ratio_data.pdf
+cp -a "$local_area"/ChPS_UE_comparison.pdf "$intnote_area"/figures_systematics/ChPS_UE_comparison.pdf
+
+# cp -a "$local_area"/DeltaDpT_final_ratio_dR_CONF_data_jet7_cent0.pdf "$intnote_area"/figures_results/DeltaDpT_final_ratio_dR_CONF_data_jet7_cent0.pdf
+# cp -a "$local_area"/DeltaDpT_final_ratio_dR_CONF_data_jet8_cent0.pdf "$intnote_area"/figures_results/DeltaDpT_final_ratio_dR_CONF_data_jet8_cent0.pdf
+# cp -a "$local_area"/DeltaDpT_final_ratio_dR_CONF_data_jet9_cent0.pdf "$intnote_area"/figures_results/DeltaDpT_final_ratio_dR_CONF_data_jet9_cent0.pdf
+# cp -a "$local_area"/DeltaDpT_final_ratio_dR_CONF_data_jet10_cent0.pdf "$intnote_area"/figures_results/DeltaDpT_final_ratio_dR_CONF_data_jet10_cent0.pdf
 
 #shape response (pos cor factors)
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/ShapeResponse2D_PbPb.pdf "$intnote_area"/figures_corrections/ShapeResponse2D_PbPb.pdf

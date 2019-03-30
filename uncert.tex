@@ -24,33 +24,29 @@ This section gives an overview of the sources of systematic uncertainties on the
 
 \item Underlying event contribution
 
-%\item MC non-closure
+\item MC non-closure
 
 \end{itemize}
 
+The systematic uncertainties are evaluated separately for \Dptr\ distributions and for their ratios as a function of jet \pT\ for \pp\ and \pbpb\ collisions. For each systematic variation, the entire unfolding procedure is repeated (2D unfolding of the fragmentation
+functions as a function of \ptjet\, the 1D unfolding of the single \ptjet\ spectrum and the bin-by-bin correction for position resolution). This is necessary because the jets are in both the 2D and the 1D unfolding procedures and must be treated in a consistent manner throughout the analysis (e.g. a shift in the JES should 
+shift jets in the fragmentation functions as a function of \ptjet\ in the same manner
+that the single jet spectrum itself is shifted).
+%The positive relative uncertainty was used to calculate the upper bound of the systematic uncertainty, whereas the negative relative uncertainty was used to calculate the lower bound. All uncertainties except the unfolding and the MC non-closure are assumed to be correlated, and are evaluated by comparing the \Rdptr\ distributions for the various systematic variations and the nominal \Rdptr\ distributions. For uncorrelated systematic uncertainties, the uncertainty on the \RDptr\ distribution is evaluated by adding the uncertainties on the \pp\ and \pbpb\ \Dptr\ distributions in quadrature. 
 
-The systematic uncertainties on the \Rdptr\ distributions for a selection of track \pt\ ranges (1.0--1.6 \GeV, 2.5--4.0 \GeV, 6.3--10 \GeV) in jets with \pt\ in the 126--158 \GeV\ range are shown in Figure~\ref{fig:rdptr_sys_uncert}. All uncertainties are assumed to be uncorrelated, and thus are combined in quadrature to give the total systematic uncertainty. The systematic uncertainties for other jet \pT\ interval as show in appendix\ref{sec:appendixA}. 
+The systematic uncertainties on the \Rdptr\ distributions for a selection of track \pt\ ranges (1.0--1.6 \GeV, 2.5--4.0 \GeV, 6.3--10 \GeV) in jets with \pt\ in the 126--158 \GeV\ range are shown in Figure~\ref{fig:rdptr_sys_uncert}. The systematic uncertainties for other jet \pT\ interval as show in appendix \ref{sec:appendixA}. 
 
 \begin{figure}
 \centering{
 \begin{tabular}{cc}
-	 \includegraphics[page=1, width=0.50\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} 	
-	 \includegraphics[page=3, width=0.50\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} \\
-	 \includegraphics[page=5, width=0.50\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} 
-	 \includegraphics[page=6, width=0.50\textwidth]{figures_systematics/ChPS_dR_sys_PbPb_error} \\
+	 \includegraphics[page=1, width=0.850\textwidth]{figures_systematics/Summary_ChPS_dR_sys_PbPb_error} 	
+	 \includegraphics[page=3, width=0.850\textwidth]{figures_systematics/Summary_ChPS_dR_sys_PbPb_error} \\
+	 \includegraphics[page=5, width=0.850\textwidth]{figures_systematics/Summary_ChPS_dR_sys_PbPb_error} 
+	 \includegraphics[page=6, width=0.850\textwidth]{figures_systematics/Summary_ChPS_dR_sys_PbPb_error} \\
 \end{tabular} }
    \caption{A summary of the systematic uncertainties on \RDptr\ distributions for different track \pt, bins, for jets with \pt\ 125--158 \GeV\ , as a function of \rvar\ for different centrality bins. The uncertainties from the JES, JER, UE, and Tracking  are shown, along with the total systematic uncertainty from all sources. }
       \label{fig:rdptr_sys_uncert}
 \end{figure}
-
-
-
-
-The systematic uncertainties have been evaluated separately for \Dptr\ distributions and for their ratios, as a function of jet \pT\ for \pp\ and \pbpb\ collisions. For each systematic variation, the entire unfolding procedure is repeated (2D unfolding of the fragmentation
-functions as a function of \ptjet\, the 1D unfolding of the single \ptjet\ spectrum and the bin-by-bin correction for position resolution). This is necessary because the jets are in both the 2D and the 1D unfolding procedures and must be treated in a consistent manner throughout the analysis (e.g. a shift in the JES should 
-shift jets in the fragmentation functions as a function of \ptjet\ in the same manner
-that the single jet spectrum itself is shifted).
-The positive relative uncertainty was used to calculate the upper bound of the systematic uncertainty, whereas the negative relative uncertainty was used to calculate the lower bound. All sources of systematic uncertainty discussed in this section are treated as mutually uncorrelated and are combined in quadrature to obtain the total systematic uncertainty. 
 
 \subsection{Jet energy scale uncertainty}
 
@@ -134,7 +130,7 @@ The systematic uncertainty associated with the unfolding is connected with the s
 
 
 \subsection{Systematic uncertainty due to the UE event subtraction}
-The systematic uncertainty associated with the estimation of the UE has two main components: one is the statistical uncertainty on the $\eta-\phi$ maps used in the map method (described in section~\ref{sec:map_method}) , and the other is the comparison of the map method to the alternative cone method (described in section~\ref{sec:cone_method}. More details on the cone method can be found in Ref.~\cite{PbPb5TeVIntNote}. 
+The systematic uncertainty associated with the estimation of the UE has two main components: one is the statistical uncertainty on the $\eta-\phi$ maps used in the map method (described in section~\ref{sec:map_method}) , and the other is the comparison of the map method to the alternative cone method (discussed in section~\ref{sec:cone_method}. More details on the cone method can be found in Ref.~\cite{PbPb5TeVIntNote}. 
 
 \subparagraph{Uncertainty from map statistic:} 
 The $\eta-\phi$ maps used in the estimation of the underlying event are sparsely populated for high track \pt\ and high \ptjet, and are susceptible to statistical fluctuations. To take this into account, 100 pseudo-experiments are conducted to re-estimate the set of maps, with a bin-by-bin gaussian variation where the mean and standard deviation were taken to be the bin content and bin error from the nominal set of maps. The distribution of the relative difference between each estimation of the shifted underlying event and and the nominal value ( $\delta (\mathrm{UE}) = \mathrm{GausWidth}(\mathrm{UE}_i - \mathrm{UE}_{\mathrm{nominal}} / \mathrm{UE}_{\mathrm{nominal}})$ is fit to a gaussian, and the width is taken to be the systematic uncertainty. This uncertainty is symmetrized to be conservative.  A few examples of the distribution of normalized relative differences can be seen in Fig. \ref{fig:gaus_diff}. The size of the systematic from this can be seen in Fig.\ref{fig:mapstat_corr}.
@@ -159,16 +155,20 @@ The $\eta-\phi$ maps used in the estimation of the underlying event are sparsely
 
 
 
-\subparagraph{Uncertainty from cone method:} The difference between the two methods is shown in Fig.~\ref{fig:conemethod_corr} and is found vary slowly with \ptjet\ and track \pT. There is a  small centrality dependence, which is coming from fact that the underlying event strongly depends on the centrality.
-This uncertainty is conservatively symmetrized. The absolute size of the uncertainty on the UE is typically small however due to small signal-to-background ratio it is the dominant systematic uncertainty in central collisions, for lowest \pT\ tracks, and large \rvar.
+\subparagraph{Uncertainty from cone method:} The difference between the UE from the two methods is discussed in section \ref{sec:cone_method} and is shown in Fig.~\ref{fig:conemethod_mapmethod}. The effect of the different UE estimation methods on the charged particle spectra is seen in Fig.\ref{fig:conemethod_chps_comparison}. This uncertainty is conservatively symmetrized. While the absolute size of the uncertainty on the UE is typically small, the small signal-to-background ratio makes this the dominant systematic uncertainty in central collisions for lowest \pT\ tracks and large \rvar.
+
+%\begin{figure}
+%\centerline{\includegraphics[page=2,width=1.\textwidth]{figures_systematics/UE_x_ratio}}
+%    \caption{Size of the systematic uncertainty from the cone method, as a function for \rvar\ for 0-10\% \pbpb\ collisions, in 126-158 GeV jets, 1-1.6 GeV tracks.}
+%    \label{fig:conemethod_corr}
+%
+%\end{figure}
 
 \begin{figure}
-\centerline{\includegraphics[page=2,width=1.\textwidth]{figures_systematics/UE_x_ratio}}
-    \caption{Size of the systematic uncertainty from the cone method, as a function for \rvar\ for 0-10\% \pbpb\ collisions, in 126-158 GeV jets, 1-1.6 GeV tracks.}
-    \label{fig:conemethod_corr}
-
+\centerline{\includegraphics[page=2,width=1.\textwidth]{figures_systematics/ChPS_UE_Comparison}}
+    \caption{Ratio of the charged particle spectra as determined using two different UE estimation methods as a function for \rvar\ for 0-10\% \pbpb\ collisions in 126-158 GeV jets and 1-1.6 GeV tracks. Deviations from unity are a combination of the difference between the two methods and the signal to background ratio.  The largest differences between the spectra are seen at large \rvar, where the signal to background is the smallest}
+    \label{fig:conemethod_chps_comparison}
 \end{figure}
-
 
 \subsection{MC non-closure}
 To make sure that all the sources of systematic uncertainties were covered the systematic uncertainty from the non-closureÄù in the MC was also evaluated. It was 
@@ -208,7 +208,7 @@ Fake rate & yes & yes & symmetrized \\ \hline
 Track momentum & yes & no & two sided \\ \hline
 Unfolding & no & yes & one sided \\ \hline
 UE subtraction & no & yes & symmetrized \\ \hline
-% MC non-closure & no & no & symmetrized \\ \hline
+MC non-closure & no & no & symmetrized \\ \hline
 \end{tabular}
 \caption{Summary of correlation of different systematic uncertainties.}
 \label{tab:systematics}

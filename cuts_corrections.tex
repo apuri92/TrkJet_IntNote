@@ -335,12 +335,12 @@ Examples of the these distributions for three different annuli (0--0.05, 0.25 --
 \begin{figure}[ht]
 \centerline{
 \begin{tabular}{ccc}
-\includegraphics[width=0.7\textwidth]{figures_UE/eta_phi_map_dR0.pdf} \\
-\includegraphics[width=0.7\textwidth]{figures_UE/eta_phi_map_dR5.pdf} \\
-\includegraphics[width=0.7\textwidth]{figures_UE/eta_phi_map_dR9.pdf} \\
+\includegraphics[width=0.7\textwidth]{figures_UE/eta_phi_map_trk2_dR0.pdf} \\
+\includegraphics[width=0.7\textwidth]{figures_UE/eta_phi_map_trk2_dR5.pdf} \\
+\includegraphics[width=0.7\textwidth]{figures_UE/eta_phi_map_trk2_dR9.pdf} \\
 \end{tabular}}
 \caption{
-Per jet $\nchUE^{\mathrm{Map}}$ distributions of charged particles evaluated in the jet core, at the jet edge, and far from the jet, for  $\mathrm{d}\Psi$ in the interval 0.8--1.00 for six centralities, 1--1.6 GeV tracks, and 126--158 GeV jets.}
+Per jet $\nchUE^{\mathrm{Map}}$ distributions of charged particles evaluated in the jet core, near the jet edge, and far from the jet, for  $\mathrm{d}\Psi$ in the interval 0.8--1.00 for six centralities, 1--1.6 GeV tracks, and 126--158 GeV jets.}
 \label{fig:ue_map}
 \end{figure}
 
@@ -419,6 +419,8 @@ That difference was found to result from intrinsic correlations between the UE c
   \end{eqnarray}   
 Examples of these factors are shown in Fig~\ref{fig:UEweights_r2}-\ref{fig:UEweights_r6}. The correction by construction corrects also for fakes and secondary contribution in the track \pT\ region 1-10~GeV in \PbPb\ collisions. These factors are also shown in Figure~\ref{fig:UEweights_r_jet0}, as a function of \rvar\ for different track \pt\ bins, for $126 < \ptjet\ < 158 \GeV$.  The size of these corrections integrated over $\rvar = 0.4$ is comparable to the UE-JER correction done in \cite{ATLAS502FFConf}.
 
+A comparison between the cone method and the map method is shown in Fig.\ref{fig:conemethod_mapmethod}. The difference between the methods varies slowly with \ptjet\ and track \pT, with a small centrality dependence coming from fact that the underlying event strongly depends on the centrality.
+
 \begin{figure}[ht]
 \centerline{
 \includegraphics[page=2,width=1.\textwidth]{figures_UE/UE_factors.pdf} \\
@@ -436,6 +438,14 @@ The multiplicative correction factors that correct for the correlation between t
 The multiplicative correction factors that correct for the correlation between the UE and the JER, fake and secondary particles in different centrality classes and $ 0.25 < r < 0.30$.}
 \label{fig:UEweights_r6}
 \end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[page=2,width=1.\textwidth]{figures_UE/UE_x_ratio}}
+    \caption{The difference between the cone method and the map method as a function for \rvar\ for 0-10\% \pbpb\ collisions, in 126-158 GeV jets, 1-1.6 GeV tracks.}
+    \label{fig:conemethod_mapmethod}
+\end{figure}
+
+
 
 
 \begin{figure}[ht]
