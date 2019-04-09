@@ -6,7 +6,7 @@ The main quantity of interest here is the charged particle \pt\ distribution in 
 %D(\pt,\ptjet) = \frac{1}{N_{\mathrm{jet}}} ~ \frac{1}{\epsilon(\pttrk)} ~ \frac{\mathrm{d} N_{\mathrm{ch}}}{\mathrm{d} \pt}~(\ptjet).
 \end{equation}
 
-where $N_{\mathrm{jet}}$ is the number of jets in consideration, $A = 2\pi r \text{d}r$ is the area of the annulus within a given range of angular distance $r$ and width $\text{d}r$, where $r = \sqrt{\Delta \eta^2 + \Delta \phi^2}$\footnote{$\Delta \eta$ and $\Delta \phi$ are the distances between the jet axis and the charged particle position in pseudorapidity and azimuth}. The $n_{\mathrm{ch}}(\pt, r)$ is the number of charged particles with give \pt\ within the annulus. The measurement is performed for the following successive intervals in $r$ around the jet are defined by their minimal and maximal angular distances, $r_{\textrm{min}}$ and $r_{\textrm{max}}$, respectively: 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8
+where $N_{\mathrm{jet}}$ is the number of jets in consideration, $A = \pi (r_{\mathrm{max}}^2 - r_{\mathrm{min}}^2) $ is the area of an annulus around the jet with its inner and outer radii $r_{\mathrm{min}}$ and $r_{\mathrm{max}}$. The angular distance from the jet axis is given by $r = \sqrt{\Delta \eta^2 + \Delta \phi^2}$\footnote{$\Delta \eta$ and $\Delta \phi$ are the distances between the jet axis and the charged particle position in pseudorapidity and azimuth}, and $n_{\mathrm{ch}}(\pt, r)$ is the number of charged particles with a given \pt\ within the annulus. The measurement is performed for the following successive intervals in $r$ around the jet, forming the annuli with inner and outer radii $r_{\textrm{min}}$ and $r_{\textrm{max}}$: 0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8
 %, 0.7, 0.8, 1.0, 1.2.
 
 \begin{figure}
@@ -44,7 +44,7 @@ The final \Dptr\ distributions are then evaluated after unfolding and normalizin
 \Dptr = \frac{1}{N_{\text{jet}}^{\text{unfolded}}} \frac{1}{\text{A}} \frac{\text{d}n^{\text{unfolded}}_{\text{ch}}}{\text{d}\pTch} \quad \quad \text{where } A = \pi (r_{\text{max}}^2 - r_{\text{min}}^2)
 \end{equation}
 
-The unfolding procedure is a combination of a two-dimensional Bayesian unfolding method in \ptjet\ and \pttrk, one-dimensional Bayesian unfolding method to correct jet spectra for the normalization and a one-dimensional bib-by-bin correction for the jet and track position resolution. 
+The unfolding procedure is a combination of a two-dimensional Bayesian unfolding method in \ptjet\ and \pttrk, one-dimensional Bayesian unfolding method to correct jet spectra for the normalization and a one-dimensional bin-by-bin correction for the jet and track position resolution. 
 
 The analysis is performed differentially in \ptjet, and centrality, with the jet \pt\ bin size growing logarithmically with \ptjet\ to ensure good statistics in the full range of the measurement. This scheme was also used in other ATLAS jet measurements~\cite{ATLAS276FFConf}. 
 

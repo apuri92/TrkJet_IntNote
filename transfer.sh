@@ -15,6 +15,8 @@ cp -a "$local_area"/UE_x_ratio_c0.pdf "$intnote_area"/figures_UE/UE_x_ratio.pdf
 cp -a "$local_area"/misc_conf_plots/map_stat_size.pdf "$intnote_area"/figures_systematics/map_stat_size.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_sys3/PbPb/ChPS_final_dR_PbPb_MC.pdf "$intnote_area"/figures_systematics/ChPS_final_dR_PbPb_MC.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/RatioProj_PbPb.pdf "$intnote_area"/figures_corrections/RatioProj_PbPb.pdf
+cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/RespPurity_PbPb.pdf "$intnote_area"/figures_corrections/RespPurity_PbPb.pdf
+cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/RespEfficiency_PbPb.pdf "$intnote_area"/figures_corrections/RespEfficiency_PbPb.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/RatioProj_pp.pdf "$intnote_area"/figures_corrections/RatioProj_pp.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/systematics/Summary*.pdf "$intnote_area"/figures_systematics/
 
@@ -46,11 +48,9 @@ cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/resp_matrix_ChPS_P
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/resp_matrix_ChPS_pp_MC.pdf "$intnote_area"/figures_corrections/resp_matrix_ChPS_pp_MC.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/resp_matrix_jet_PbPb_MC.pdf "$intnote_area"/figures_corrections/resp_matrix_jet_PbPb_MC.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/resp_matrix_jet_pp_MC.pdf "$intnote_area"/figures_corrections/resp_matrix_jet_pp_MC.pdf
-
-
 #jet spectra closure
-cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/spect_closure_pp_MC.pdf "$intnote_area"/figures_corrections/spect_closure_pp_MC.pdf
-cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/spect_closure_PbPb_MC.pdf "$intnote_area"/figures_corrections/spect_closure_PbPb_MC.pdf
+cp -a "$local_area"/output_dev/unfold/output_pdf_sys3/pp/spect_closure_pp_MC.pdf "$intnote_area"/figures_corrections/spect_closure_pp_MC.pdf
+cp -a "$local_area"/output_dev/unfold/output_pdf_sys3/PbPb/spect_closure_PbPb_MC.pdf "$intnote_area"/figures_corrections/spect_closure_PbPb_MC.pdf
 
 
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/evol_PbPb_MC.pdf "$intnote_area"/figures_corrections/evol_PbPb_MC.pdf
@@ -58,8 +58,8 @@ cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/evol_PbPb_data.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/evol_pp_MC.pdf "$intnote_area"/figures_corrections/evol_pp_MC.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/evol_pp_data.pdf "$intnote_area"/figures_corrections/evol_pp_data.pdf
 
-cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/ChPS_final_PbPb_MC.pdf "$intnote_area"/figures_corrections/ChPS_final_PbPb_MC.pdf
-cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/ChPS_final_pp_MC.pdf "$intnote_area"/figures_corrections/ChPS_final_pp_MC.pdf
+cp -a "$local_area"/output_dev/unfold/output_pdf_sys3/PbPb/ChPS_final_PbPb_MC.pdf "$intnote_area"/figures_corrections/ChPS_final_PbPb_MC.pdf
+cp -a "$local_area"/output_dev/unfold/output_pdf_sys3/pp/ChPS_final_pp_MC.pdf "$intnote_area"/figures_corrections/ChPS_final_pp_MC.pdf
 
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/ChPS_final_dR_PbPb_data.pdf "$intnote_area"/figures_results/ChPS_dR_PbPb_data.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/ChPS_final_dR_pp_data.pdf "$intnote_area"/figures_results/ChPS_dR_pp_data.pdf

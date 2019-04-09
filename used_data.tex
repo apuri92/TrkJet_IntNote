@@ -3,7 +3,7 @@
 \subsection{Data samples}
 %\label{sec:data}
 
-This analysis used \pp\ and \PbPb\ collisions at \sqrtsnn~=~5.02~TeV, recorded in 2015, with a total integrated luminosity of 25 pb$^{-1}$ and 0.49~nb$^{-1}$ respectively. The run numbers for each set are given below:
+This analysis used the original processing of \pp\ (reconstruction tag 7744) and \PbPb\ (reconstruction tag 7874) collisions at \sqrtsnn~=~5.02~TeV recorded in 2015 with a total integrated luminosity of 25 pb$^{-1}$ and 0.49~nb$^{-1}$ respectively. The run numbers for each set are given below:
 \begin{itemize}
 \item 2015 \pp\ data: 286282, 286361, 286364, 286367, 286411, 286474
 \item 2015 \PbPb\ data: 286711, 286717, 286748, 286767, 286834, 286854, 286908, 286990, 287038, 287044, 287068, 287222, 287224, 287259, 287270, 287281, 287321, 287330, 287334, 287378, 287380, 287382, 287560, 287594, 287632, 287706, 287728, 287827, 287843, 287866, 287924, 287931
@@ -79,17 +79,17 @@ We analyze jets selected from jet triggers in the region of jet \pt\ for which t
 
 In addition to the jet triggered sample, a MB triggered sample defined by a logical OR of the total energy trigger with a threshold of 50~\GeV\ and the ZDC coincidence trigger was used as part of the MC overlay procedure
 
-The event fraction as a function of run number  for both the hard probes stream and the minimum bias overlay stream is shown in Fig.~\ref{fig:evnt_fraction}
+The event fraction as a function of run number for both the hard probes stream and the minimum bias overlay stream in \pbpb\ is shown in Fig.~\ref{fig:evnt_fraction}
 
  \begin{figure}[h]
     \centerline{
-       \includegraphics[width=0.75\textwidth]{figures_general/EventPercentages.pdf}
+       \includegraphics[width=0.9\textwidth]{figures_general/EventPercentages.pdf}
     }
-    \caption{Event fraction as a function of runs for Hard Probes and the Minimum Bias Overlay Streams.}
+    \caption{Event fraction as a function of runs for Hard Probes and the Minimum Bias Overlay Streams in \pbpb\ collisions.}
     \label{fig:evnt_fraction}
  \end{figure}
 
-The run dependence of the underlying event (a core part of this measurement) was tested by dividing the data and MC into three periods with approximately equal number of events in each period: 286711 -- 287259, 287270 -- 287632, and 287706 -- 287931. This was done because the underlying event estimation procedure was limited with the reduced statistics when looking at each individual run. The stability of the underlying event is shown in Fig.\ref{fig:weighted_runs}.
+The run dependence of the underlying event (a core part of this measurement) was tested by dividing the data and MC into three periods with approximately equal number of events in each period: 286711 -- 287259, 287270 -- 287632, and 287706 -- 287931. The underlying event determined for each period compared to the nominal underlying event evaluated for the entire dataset is shown in Fig.\ref{fig:weighted_runs}, and it can be seen that the UE is stable throughout the data taking period.
 %The systematic uncertainty associated with the run dependence was included in the calculation of the systematic uncertainty on the result.
 
  \begin{figure}[h]

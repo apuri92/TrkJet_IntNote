@@ -28,7 +28,7 @@ This section gives an overview of the sources of systematic uncertainties on the
 
 \end{itemize}
 
-The systematic uncertainties are evaluated separately for \Dptr\ distributions and for their ratios as a function of jet \pT\ for \pp\ and \pbpb\ collisions. For each systematic variation, the entire unfolding procedure is repeated (2D unfolding of the fragmentation
+The systematic uncertainties are evaluated separately for \Dptr\ distributions and for their ratios as a function of jet \pT\ for \pp\ and \pbpb\ collisions. For each systematic variation, the entire analysis procedure is repeated (including the 2D unfolding of the fragmentation
 functions as a function of \ptjet\, the 1D unfolding of the single \ptjet\ spectrum and the bin-by-bin correction for position resolution). This is necessary because the jets are in both the 2D and the 1D unfolding procedures and must be treated in a consistent manner throughout the analysis (e.g. a shift in the JES should 
 shift jets in the fragmentation functions as a function of \ptjet\ in the same manner
 that the single jet spectrum itself is shifted).
@@ -172,7 +172,7 @@ The $\eta-\phi$ maps used in the estimation of the underlying event are sparsely
 
 \subsection{MC non-closure}
 To make sure that all the sources of systematic uncertainties were covered the systematic uncertainty from the non-closureÄù in the MC was also evaluated. It was 
-calculated as a deviation from unity of ratios of fully corrected and reconstructed charged particle distributions in MC to the charged particle distributions
+calculated using the technical closure (done using non-reweighed response matrices) between the fully corrected and reconstructed charged particle distributions in MC to the charged particle distributions
 evaluated at the truth level. 
 This uncertainty can be considered a measure of unknowns in the analysis, but it also includes fluctuations due to 
 the finite statistics in the MC which are used to evaluate it (especially in high \pttrk\ regions of
@@ -206,7 +206,7 @@ Material & yes & yes & one sided \\ \hline
 Dense environment & yes & yes & one sided \\ \hline
 Fake rate & yes & yes & symmetrized \\ \hline
 Track momentum & yes & no & two sided \\ \hline
-Unfolding & no & yes & one sided \\ \hline
+Unfolding & no & yes & symmetrized \\ \hline
 UE subtraction & no & yes & symmetrized \\ \hline
 MC non-closure & no & no & symmetrized \\ \hline
 \end{tabular}
