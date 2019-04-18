@@ -15,10 +15,13 @@ cp -a "$local_area"/UE_x_ratio_c0.pdf "$intnote_area"/figures_UE/UE_x_ratio.pdf
 cp -a "$local_area"/misc_conf_plots/map_stat_size.pdf "$intnote_area"/figures_systematics/map_stat_size.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_sys3/PbPb/ChPS_final_dR_PbPb_MC.pdf "$intnote_area"/figures_systematics/ChPS_final_dR_PbPb_MC.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/RatioProj_PbPb.pdf "$intnote_area"/figures_corrections/RatioProj_PbPb.pdf
+cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/TruthProj_pp.pdf "$intnote_area"/figures_corrections/TruthProj_PbPb.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/RespPurity_PbPb.pdf "$intnote_area"/figures_corrections/RespPurity_PbPb.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/PbPb/RespEfficiency_PbPb.pdf "$intnote_area"/figures_corrections/RespEfficiency_PbPb.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/RatioProj_pp.pdf "$intnote_area"/figures_corrections/RatioProj_pp.pdf
+cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/pp/TruthProj_pp.pdf "$intnote_area"/figures_corrections/TruthProj_pp.pdf
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/systematics/Summary*.pdf "$intnote_area"/figures_systematics/
+
 
 cp -a "$local_area"/output_dev/unfold/output_pdf_nominal/ChPS_FF_final_injet_ratio_data.pdf "$intnote_area"/figures_results/ChPS_FF_final_injet_ratio_data.pdf
 cp -a "$local_area"/ChPS_UE_comparison.pdf "$intnote_area"/figures_systematics/ChPS_UE_comparison.pdf

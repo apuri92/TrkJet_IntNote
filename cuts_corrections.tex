@@ -155,7 +155,8 @@ track $d_0$ (bottom left), and track $z_0 \sin\theta$ (bottom right).}
 five track \pttrktruth\ selections. 
 (right) Track momentum resolution as a function of \etatrktruth\ for five \pttrktruth\ selections.
 Both plots are for \pp\ MC.  
-All tracks shown in this plot have passed the 2015 default tracking cuts defined in this section.}
+All tracks shown in this plot have passed the 2015 default tracking cuts defined in this section. The \pt\ in the legend corresponds to the bin centers in the following track \pt\ bins: 1.3 -- 1.8 GeV, 5.6 -- 7.5 GeV, 13.3 -- 17.7 GeV, 56.1 -- 74.8 GeV, 99.7 -- 132.9 GeV, \mbox{177.2 -- 236.2 GeV}
+ }
 \label{fig:momres_pp}
 \end{figure}
 
@@ -362,7 +363,7 @@ The map method is then applied to data to measure the UE charged particle contri
 
 \subsubsection{Cone Method}
 \label{sec:cone_method}
-The cone method uses a regular grid of 9 cones of size $R = 0.8$ covering the full inner detector region (shown in Fig.\ref{fig:cone_grid}). The size of the cone corresponds to the radial phase space being investigated (0.8 in this case). Cones within a distance of $dR=1.6$ to a reconstructed jet are excluded if $\ptjet > 90$ GeV. They are also excluded if they contain a track with $\pt > 10$ GeV. The 10 GeV was cut was chosen based on the small centrality dependence of the combined rate of fake and underlying event tracks above 10 GeV as shown in Fig.\ref{fig:fakeratehijing}. The fraction of events as a function of number of cones used is shown in Fig.\ref{fig:cone_stats}. It can be seen that in MC the number of cones used is consistent with there being no jet quenching. Moreover, quenching in data leads to only one jet causing exclusions, consistent with most events using 7 cones.
+The cone method uses a regular grid of 9 cones of size $R = 0.8$ covering the full inner detector region (shown in Fig.\ref{fig:cone_grid}). The size of the cone corresponds to the radial phase space being investigated (0.8 in this case). Cones within a distance of $dR=1.6$ to a reconstructed jet are excluded if $\ptjet > 90$ GeV. They are also excluded if they contain a track with $\pt > 10$ GeV. The 10 GeV was cut was chosen based on the small centrality dependence of the combined rate of fake and underlying event tracks above 10 GeV as shown in Fig.\ref{fig:fakeratehijing}. The fraction of events as a function of number of cones used in each centrality bin is shown in Fig.\ref{fig:cone_stats}. It can be seen that in the MC the number of cones used is consistent with there being no jet quenching. Moreover, quenching in central \pbpb\ data leads to only one jet causing exclusions, consistent with most events using 7 cones. For more peripheral \pbpb\ collisions, the cone distribution tends to look like the distribution with no quenching for more peripheral collisions.
 
 \begin{figure}[ht]
      \centerline{
@@ -380,7 +381,7 @@ The cone method uses a regular grid of 9 cones of size $R = 0.8$ covering the fu
      \label{fig:cone_stats}
   \end{figure}   
 
-The resulting UE charged particle yields $\fd \nchUE^{\mathrm{Cone}}/ \fd \pTch$ is evaluated over the 1 -- 10 GeV range as a function of \pt\, \ptjet\, centrality, and \rvar, and then averaged over all cones according to.
+The resulting UE charged particle yields $\fd \nchUE^{\mathrm{Cone}}/ \fd \pTch$ are evaluated over the 1 -- 10 GeV range as a function of \pt\, \ptjet\, centrality, and \rvar, and then averaged over all cones according to.
 
  \begin{eqnarray}
  \label{eq:Dptsub}
@@ -407,7 +408,7 @@ Here $N_{\mathrm{cones}}$ is the number of background cones associated with a gi
 \label{fig:flow_corr}
 \end{figure}
 
-\subparagraph{UE and JER correlation}
+\subparagraph{UE and JER correlation: }
 %Since the MC samples utilize the overlay procedure, where the real MB \PbPb\ collisions are used overlaid onto PYTHIA di-jets events, the UE distribution is the same as in data. 
 
 %The UE distributions can alternatively be calculated in MC samples from tracks that do not have an associated truth particle, $\fd \nchUE^{\mathrm{TM}}/ \fd \pTch$. This allowed us to study the size of the UE as a function of $r$ with respect to the jet axis. The UE estimated using this method is also needed to correct for the correlation between UE and JER and the enhancement of the rate of secondary particles in the jet which will be described below. The UE distribution normalized to unit area plotted as a function of $r$ with respect to the jet axis is shown in Fig.~\ref{fig:UEdR} for the lowest track \pt\ interval where the contribution of the UE is the largest. The two distributions represent the UE with and without the secondary particles. The UE strongly decreases with decreasing number of binary nucleon-nucleon as the collision centrality decreases. Only a very small dependence on the $r$ is seen for the UE when the secondary particles are not included. A small effect is expected as result of the pseudorapidity distribution of jets is enhanced towards the mid-rapidity region and the yields of UE particles decreases as a function of $\eta$, i.e. towards large $\Delta R$. As the secondary particles are generated by primary PYTHIA particles it is expected to see the enhancement towards the core of the jet when the multiplicity of primary particles is increased.      
@@ -476,15 +477,15 @@ The absolute magnitude of the correction increases towards the higher track \pt\
      
 
 The impact of the underlying event and fake track subtraction on the \Dptr\ distributions is shown in 
-Figure~\ref{fig:UEimpact_r2}-\ref{fig:UEimpact_r6}.
+Figure~\ref{fig:UEimpact_r2}-\ref{fig:UEimpact_r11}.
 The magnitude of this correction is the largest for low track \pt\ in central \pbpb\ collisions and the largest annulus. In the most extreme case the S/B ratios can be as low as 1/100.  The size of the correction decreases rapidly with increasing track \pt, decreasing centrality and towards the core of the jet.  In \pp\ collisions the magnitude of the fake track subtraction
 is always much less than 5\%.
 
 \begin{figure}[ht]
 \centerline{
- \includegraphics[page=2,width=0.8\textwidth]{figures_UE/ChPS_B2S_PbPb_data.pdf} \\
+ \includegraphics[page=2,width=0.85\textwidth]{figures_UE/ChPS_B2S_PbPb_data.pdf} \\
 }
- \caption{Ratio between the raw \Dptr\ distributions without and with the UE 
+ \caption{Ratio between the raw \Dptr\ distributions before and after the UE 
         subtraction in different centrality classes and different jet \pT\ intervals for $ 0.05 < r < 0.10$.}
     \label{fig:UEimpact_r2}
  \end{figure}
@@ -493,10 +494,20 @@ is always much less than 5\%.
 \centerline{
 \includegraphics[page=6,width=0.8\textwidth]{figures_UE/ChPS_B2S_PbPb_data.pdf} \\
 }
-\caption{Ratio between the raw \Dptr\ distributions without and with the UE
+ \caption{Ratio between the raw \Dptr\ distributions before and after the UE 
 subtraction in different centrality classes and different jet \pT\ intervals for $ 0.25 < r < 0.30$.}
 \label{fig:UEimpact_r6}
 \end{figure}
+
+\begin{figure}[ht]
+\centerline{
+\includegraphics[page=11,width=0.8\textwidth]{figures_UE/ChPS_B2S_PbPb_data.pdf} \\
+}
+ \caption{Ratio between the raw \Dptr\ distributions before and after the UE 
+subtraction in different centrality classes and different jet \pT\ intervals for $ 0.70 < r < 0.80$.}
+\label{fig:UEimpact_r11}
+\end{figure}
+
 
 
 The basic performance of the UE subtraction has been tested in the MC overlay dataset. The closure test was performed using the MC overlay sample that has the same UE as in the data and will be discussed in the next subsection. The truth \Rdptr\ distributions were compared to fully corrected \Rdptr\ distributions where the  UE contribution is subtracted by the same method as used in the data (see Fig.~\ref{fig:PbPb_ChPS_closure}). From the above mentioned tests we have concluded that the UE subtraction procedure is correct and works well. The UE estimate is subjected to variation as part of the systematic uncertainties. For the \pp\ data, we have not performed any UE subtraction.
@@ -603,8 +614,7 @@ There is an additional unfolding procedure applied in this analysis to correct f
 \label{fig:PbPb_trk_phi_res}
 \end{figure}
 
-The correction factors are derived using response matrices that correlate the reconstructed and truth angular distance $r$. These matrices are evaluated for different jet and track \pT\ in different centrality classes. Examples of the response matrices are shown in Fig~\ref{fig:PbPb_bbb_2d_response} and Fig.~\ref{fig:pp_bbb_2d_response} for \pbpb\ and \pp\ MC samples. The bin-by-bin correction procedure is applied to \Dptr\ distribution unfolded to the particle level in terms of track and jet \pT\ by the two unfolding procedures discussed above. Thus, the correction factors for angular resolution were derived using the the reconstructed jets and tracks where the reconstructed jet and track \pT\ is replaced by the corresponding truth \pT. The bin-by-bin factors are then estimated as ratio of projections from the response matrices on the truth and reconstructed axis. These correction factors are shown in Fig.~\ref{fig:pos_corr_factors_PbPb_c0} and Fig.~\ref{fig:pos_corr_factors_pp} for \pbpb\ and \pp\ collisions as a function of \rvar. The size of the correction is small and the efficiency and purity of the unfolding procedure can be seen in the Fig.\ref{fig:RespPurity_PbPb}-\ref{fig:RespEfficiency_PbPb}.
-
+The correction factors are derived using response matrices that correlate the reconstructed and truth angular distance $r$. These matrices are evaluated for different jet and track \pT\ in different centrality classes. Examples of the response matrices are shown in Fig~\ref{fig:PbPb_bbb_2d_response} and Fig.~\ref{fig:pp_bbb_2d_response} for \pbpb\ and \pp\ MC samples. The bin-by-bin correction procedure is applied to \Dptr\ distribution unfolded to the particle level in terms of track and jet \pT\ by the two unfolding procedures discussed above. Thus, the correction factors for angular resolution were derived using the the reconstructed jets and tracks where the reconstructed jet and track \pT\ is replaced by the corresponding truth \pT. The bin-by-bin factors are then estimated as ratio of projections from the response matrices on the truth and reconstructed axis. These correction factors are shown in Fig.~\ref{fig:pos_corr_factors_PbPb_c0} and Fig.~\ref{fig:pos_corr_factors_pp} for \pbpb\ and \pp\ collisions as a function of \rvar. The efficiency and purity of the unfolding procedure can be seen in the Fig.\ref{fig:RespPurity_PbPb}-\ref{fig:RespEfficiency_PbPb}. 
 
 \begin{figure}[ht]
 \centering
@@ -624,14 +634,14 @@ The correction factors are derived using response matrices that correlate the re
 \begin{figure}[ht]
 \centering
 \includegraphics[page=1, width=0.9\textwidth]{figures_corrections/RatioProj_PbPb}
-\caption{The correction factors applied to the unfolded charged particle spectra, shown for the most central collisions, as a function of $r$, with each panel showing a different track \pt\ bin, and each curve showing a different \ptjet\ range. These factors correct for the jet position resolution in \pbpb\ collisions.}
+\caption{The correction factors applied to the unfolded charged particle spectra, shown for the most central \pbpb\ collisions, as a function of $r$, with each panel showing a different track \pt\ bin, and each curve showing a different \ptjet\ range. These factors correct for the jet position resolution in \pbpb\ collisions.}
 \label{fig:pos_corr_factors_PbPb_c0}
 \end{figure}
 
 \begin{figure}[ht]
 \centering
 \includegraphics[page=1, width=0.9\textwidth]{figures_corrections/RatioProj_pp}
-\caption{The correction factors applied to the unfolded charged particle spectra, as a function of $r$, with each panel showing a different track \pt\ bin, and each curve showing a different \ptjet\ range. These factors correct for the jet position resolution in \pp\ collisions..}
+\caption{The correction factors applied to the unfolded charged particle spectra in \pp\ collisions, as a function of $r$, with each panel showing a different track \pt\ bin, and each curve showing a different \ptjet\ range. These factors correct for the jet position resolution in \pp\ collisions.}
 \label{fig:pos_corr_factors_pp}
 \end{figure}
 
@@ -651,6 +661,14 @@ The correction factors are derived using response matrices that correlate the re
 \label{fig:RespEfficiency_PbPb}
 \end{figure}
 
+It can be seen that these corrections become large at the edges of the jet cone for tracks that carry a significant fraction of the jet momentum. This is an artifact of the jet reconstruction algorithm, where a truth track near the edge of a truth jet will pull the reconstructed jet towards itself, causing a depletion of high \pt\ particles at the edge of the jet cone. This depletion can be seen in the distribution of truth charged particles in truth jets shown in Fig.\ref{fig:truthProj_pp} and was also seen in \cite{Choudalakis:1248716}. These large factors result in a large non-closure near the jet edge for tracks carrying a significant momentum fraction of the jet. To exclude these effects, the results are only shown for tracks that show a closure of less than 5\%.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[page=1, width=0.9\textwidth]{figures_corrections/TruthProj_pp}
+\caption{The distribution of truth charged particles in truth jets for different track \pt\ ranges and \ptjet\ ranges in \pp\ collisions. It can be seen that there is a kink in the distribution at the jet edge for high \pt\ tracks.}
+\label{fig:truthProj_pp}
+\end{figure}
 
 
 The \Dptr\ distributions at various stages of the analysis in \pp\ MC and data (Fig:\ref{fig:evol_pp}), and \pbpb\ MC and data (Fig:\ref{fig:evol_PbPb_MC}-\ref{fig:evol_PbPb_data}) are also shown.
