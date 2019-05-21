@@ -17,8 +17,9 @@ A description of the analysis procedure to reconstruct the $\Dptr$ distribution,
 \subsection{Jet Selection and final energy calibration}
 \label{Sec:JetSelection}
 Since the Inner Detector (ID) covers the $|\eta| < 2.5$, the analysis can 
-only be performed for jets within the pseudorapidity interval of $|\eta| < 1.7$ to have the entire $ r = $ 0.8 cone under investigation fully covered by the tracking detector. In both collision systems, jets are 
-measured with \ptjet\ between 126~GeV and 316~GeV in following four successive intervals: 126--158, 158--200, 200--251, and 251--316~GeV. This binning was motivated by the large fake rate below 100 \GeV. An underflow bin was also needed for the unfolding procedure, and hence, the measurement starts at 126 \GeV. This binning is also used in previous heavy ion jet measurements (\cite{ATLAS502FFConf}). Truth jets were associated with the nearest reconstructed jet using the matching of $\dR<0.2$ for the performance study and to build response matrices for the unfolding procedure. The same \dR\ matching criteria were employed in previous ATLAS HI jet analyses and are justified by a detailed performance study~\cite{Aad:12081967v1}. To prevent nearby jets from distorting the measurement of \Dptr\ distributions, 
+only be performed for jets within the pseudorapidity interval of $|\eta| < 1.7$ to have the entire $ r =  0.8$ cone under investigation fully covered by the tracking detector. In both collision systems, the analysis is done for jets with  
+measured \ptjet\ between 126~GeV and 316~GeV in following four successive intervals: \mbox{126--158}, \mbox{158--200}, \mbox{200--251}, and \mbox{251--316}~GeV. The response matrices used for the unfolding procedure are filled for jets with $\ptjet > 100$~GeV and \mbox{$\ptjettruth > 60$ GeV}, with the \mbox{100--126} GeV and \mbox{316--400}~GeV bins being used as the underflow and overflow bins respectively. 
+These fiducial definitions were motivated by the large fake rate below 100 \GeV, and have been used in previous heavy ion jet measurements (\cite{ATLAS502FFConf}). Truth jets were associated with the nearest reconstructed jet using the matching of $\dR<0.2$ for the performance study and to build response matrices for the unfolding procedure. The same \dR\ matching criteria were employed in previous ATLAS HI jet analyses and are justified by a detailed performance study~\cite{Aad:12081967v1}. To prevent nearby jets from distorting the measurement of \Dptr\ distributions, 
 jets are rejected if there is another jet with a higher \ptjet\ than the considered jet anywhere
 within a distance of $\Delta R < 1.0$. The isolation cut removes approximately 0.01\% of jets (see Figure \ref{fig:ISO}), and has almost no impact on the final measurement.
 
@@ -34,7 +35,7 @@ within a distance of $\Delta R < 1.0$. The isolation cut removes approximately 0
 
 
 
-A final calibration, referred to as a cross-calibration€~\cite{cc2015}, 
+A final calibration, referred to as a cross-calibrationÂ€Â~\cite{cc2015}, 
 was applied to the data to account for observed differences in the calorimetric response between data and MC. The cross-calibration factors were estimated using in-situ calibration studies~\cite{HIjesnote} where jets are measured in events while recoiling against objects for which the energy scale is well known. 
 No correction for the jet reconstruction efficiency is necessary, as the analysis is performed in the jet \pT\ region where the jet reconstruction is fully efficient~\cite{ATLAS-COM-PHYS-2013-1369}. 
 
@@ -80,6 +81,7 @@ of dead cells or cells with a bad response, by noise spikes in the hadronic end-
 
 The track selection cuts used here follow the cuts used in~\cite{ATLAS502FFConf}. These provide a low level of fake tracks and 
 a track reconstruction efficiency that is independent of the \pt\ of the jet the track is associated with.  
+The analysis is done for tracks with measured \pt\ between 1~GeV and 63~GeV. The response matrices used for the unfolding are filled for tracks with $\pt > 0.9$ GeV, with the 0.9--1 GeV and 63--158 GeV being the underflow and overflow bins respectively.
 The cuts used here are the ``tight" cuts as described in Ref.~\cite{ref:tracktwiki} and were utilized in previous HI jet fragmentation measurements. The default tracking cuts used both in \pp\ and \PbPb\ analysis are:
 \begin{itemize}
 \item{ track $\pT>$~1~GeV}
@@ -325,9 +327,9 @@ To correct for the contribution from fake and secondary particles, charged parti
 
 The underlying event subtraction performed on the calorimetric jet energy is described in Sec.~\ref{sec:reconstruction}. Charged particles from the nucleon-nucleon scatterings that are not associated with the hard scattering in question constitute a background to the \Dptr\ distributions that needs to be subtracted from the measured distributions. This background strongly depends on the collisions centrality and on the charged particle \pt. In the measurement of the inclusive jet fragmentation functions it was found that the UE contribution is negligible for charged particles with $\pt>10$~GeV~\cite{PbPb5TeVIntNote}. This can be seen in the centrality dependence of the combined rate of fake and underlying event charged particles shown in Fig.~\ref{fig:fakeratepbpb} where no significant centrality dependence is observed for track above 10 GeV. 
 
-The UE is not subtracted in pp collisions since the pileup contribution is negligible.
+In \pp\ collisions, the UE is not subtracted. The pileup contribution is negligible and subtracting the intrinsic UE from the hard scattering processes would also necessitate a similar subtraction in the particle level fragmentation functions in \pbpb\ that would be generator dependent and make comparisons between \pp\ and \pbpb\ non-trivial.
 
-Two methods are used to estimate the underlying event for this analysis. The nominal ``Map method", and the alternative ``Cone method" to provide a systematic uncertainty. The former uses charged particle distributions of $\mathrm{d}N_{\mathrm{ch}}/\mathrm{d}\phi\mathrm{d}\eta(\mathrm{cent},\pt, \mathrm{d}\Psi_{\mathrm{ch}})$ in MC overlay events, while the latter evaluates the underlying event on an event-by-event basis using a grid of cones. 
+In \pbpb\ collisions, the UE from the soft processes is estimated using two methods. The nominal ``Map method", and the alternative ``Cone method" to provide a systematic uncertainty. The former uses charged particle distributions of $\mathrm{d}N_{\mathrm{ch}}/\mathrm{d}\phi\mathrm{d}\eta(\mathrm{cent},\pt, \mathrm{d}\Psi_{\mathrm{ch}})$ in MC overlay events, while the latter evaluates the underlying event on an event-by-event basis using a grid of cones. 
 
 \subsubsection{Map Method}
 \label{sec:map_method}
@@ -375,7 +377,7 @@ The cone method uses a regular grid of 9 cones of size $R = 0.8$ covering the fu
 
 \begin{figure}[ht]
      \centerline{
-        \includegraphics[width=0.45\textwidth]{figures_UE/cone_stats.pdf}
+        \includegraphics[width=0.9\textwidth]{figures_UE/cone_stats}
      }
      \caption{Fraction of events as a function of the number of cones used for the estimation of the underlying event.}
      \label{fig:cone_stats}
@@ -445,7 +447,7 @@ The multiplicative correction factors that correct for the correlation between t
 \end{figure}
 
 \begin{figure}
-\centerline{\includegraphics[page=2,width=1.\textwidth]{figures_UE/UE_x_ratio}}
+\centerline{\includegraphics[page=2,width=1.\textwidth]{figures_UE/UE_x_ratio_c0}}
     \caption{The difference between the cone method and the map method as a function for \rvar\ for 0-10\% \pbpb\ collisions, in 126-158 GeV jets, 1-1.6 GeV tracks.}
     \label{fig:conemethod_mapmethod}
 \end{figure}
@@ -661,6 +663,15 @@ The correction factors are derived using response matrices that correlate the re
 \label{fig:RespEfficiency_PbPb}
 \end{figure}
 
+The robustness of this correction can be validated by constructing \Dptr\ distributions using a coarser \pt\ binning (entire analysis chain is re-done) and comparing them to a summation of the individually unfolded narrow bins. This comparison can be seen in Fig.\ref{fig:MergedBinCheck}, for $1 < \pt < 4$ GeV, $126 < \ptjet < 158$ GeV,  for 0-10\%. central \pbpb\ and \pp\ collisions, and is seen to be unity.
+
+ \begin{figure}
+	 \includegraphics[width=0.95\textwidth]{figures_general/MergedBinCheck.pdf}
+   \caption{The \Dptr\ distributions in \pp\ and 0--10\% central \pbpb, constructed using a single bin from 1--4 GeV (merging the first three \pt\ bins in this analysis) compared to the \Dptr\ distributions constructed by adding up the bins individually: \mbox{1--1.6 GeV}, \mbox{1.6--2.5 GeV} and \mbox{2.5--4 GeV}. This comparison tests the robustness of the angular bin by bin correction and its dependence on the width of the \pt\ bins.}
+      \label{fig:MergedBinCheck}
+\end{figure}
+
+
 It can be seen that these corrections become large at the edges of the jet cone for tracks that carry a significant fraction of the jet momentum. This is an artifact of the jet reconstruction algorithm, where a truth track near the edge of a truth jet will pull the reconstructed jet towards itself, causing a depletion of high \pt\ particles at the edge of the jet cone. This depletion can be seen in the distribution of truth charged particles in truth jets shown in Fig.\ref{fig:truthProj_pp} and was also seen in \cite{Choudalakis:1248716}. These large factors result in a large non-closure near the jet edge for tracks carrying a significant momentum fraction of the jet. To exclude these effects, the results are only shown for tracks that show a closure of less than 5\%.
 
 \begin{figure}[ht]
@@ -689,7 +700,7 @@ The \Dptr\ distributions at various stages of the analysis in \pp\ MC and data (
 \centerline{
 \includegraphics[page=5, width=0.85\textwidth]{figures_corrections/evol_PbPb_MC.pdf}
 }
-\caption{The evolution of the \Dptr\ distributions for \PbPb\ MC as various corrections are applied. The spectra is shown for tracks with $0.05 < \Delta r < 0.10$ away from the jet axis, for $126 < \ptjet < 158 $GeV. The ratios showing the effect of the subtraction, unfolding and bin by bin correction (left and right), as well as the MC closure (left) are shown in the lower half of the panels. The different panels are different centrality selections.}
+\caption{The evolution of the \Dptr\ distributions for \PbPb\ MC as various corrections are applied. The spectra is shown for tracks with $0.05 < \Delta r < 0.10$ away from the jet axis, for $126 < \ptjet < 158$ GeV. The ratios showing the effect of the subtraction, unfolding and bin by bin correction (left and right), as well as the MC closure (left) are shown in the lower half of the panels. The different panels are different centrality selections.}
 \label{fig:evol_PbPb_MC}
 \end{figure}
 
@@ -697,7 +708,7 @@ The \Dptr\ distributions at various stages of the analysis in \pp\ MC and data (
 \centerline{
 \includegraphics[page=5, width=0.85\textwidth]{figures_corrections/evol_PbPb_data.pdf}
 }
-\caption{The evolution of the \Dptr\ distributions for \PbPb\ data (bottom six panels) as various corrections are applied. The spectra is shown for tracks with $0.05 < \Delta r < 0.10$ away from the jet axis, for $126 < \ptjet < 158 $GeV. The ratios showing the effect of the subtraction, unfolding and bin by bin correction (left and right), as well as the MC closure (left) are shown in the lower half of the panels. The different panels are different centrality selections.}
+\caption{The evolution of the \Dptr\ distributions for \PbPb\ data (bottom six panels) as various corrections are applied. The spectra is shown for tracks with $0.05 < \Delta r < 0.10$ away from the jet axis, for $126 < \ptjet < 158$ GeV. The ratios showing the effect of the subtraction, unfolding and bin by bin correction (left and right), as well as the MC closure (left) are shown in the lower half of the panels. The different panels are different centrality selections.}
 \label{fig:evol_PbPb_data}
 \end{figure}
 
